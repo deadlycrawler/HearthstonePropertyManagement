@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Hearthstone Property Management</string>
+
+    <string name="sell">sell</string>
+
+    <string name="rent">rent</string>
+
+    <string name="news">news</string>
+
+    <string name="contactString">contact</string>
+
+    <string name="purchaseString">buy</string>
+
 </resources>
