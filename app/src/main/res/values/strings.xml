@@ -11,4 +11,9 @@
 
     <string name="purchaseString">buy</string>
 
+    <string name="emailContent">Good after noon william i would like to give you a million dollars</string>
+
+
+    <string name="emailSubject">Regarding your properties</string>
+
 </resources>

@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import static android.R.attr.name;
 
 public class contact extends AppCompatActivity {
 
@@ -18,21 +15,28 @@ public class contact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contact);
 
-
-
         ImageView email = (ImageView) findViewById(R.id.email);
+        ImageView phone = (ImageView) findViewById(R.id.phone);
+
 
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                composeEmail(Address(),subject(),emailContent());
+                composeEmail(Address(), subject(), emailContent());
+            }
+        });
+
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                dialOffice("5306324507");
             }
         });
     }
 
-
-    //intent that composes an email to "deadlycrawler2@gmail.com"
+    //intent that composes an email
     public void composeEmail(String[] addresses, String subject, String emailContent) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
@@ -45,20 +49,24 @@ public class contact extends AppCompatActivity {
         }
     }
 
-    public String emailContent(){
-
-        String emailContent = "Good after noon william i would like to give you a million dollars";
-
+    public String emailContent() {
+        String emailContent = getString(R.string.emailContent);
         return emailContent;
     }
 
     private String[] Address() {
-        String[] emailAddresses= {"Deadlycrawler2@gmail.com"};
+        String[] emailAddresses = {"Deadlycrawler2@gmail.com"};
         return emailAddresses;
     }
+
     private String subject() {
-        return "Reguarding your properties";
+        return getString(R.string.emailSubject);
     }
 
+    //intent to Dial a number
+
+    private void dialOffice(final String phoneNumber) {
+        startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phoneNumber, null)));
+    }
 
 }
