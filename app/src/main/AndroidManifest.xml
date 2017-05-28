@@ -16,7 +16,6 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,7 +25,28 @@
 
         <activity
             android:name=".contact"
-            android:label="@string/contactString"/>
+            android:label="@string/contactString"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".buy"
+            android:label="@string/purchaseString"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".sell"
+            android:label="@string/sell"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".rent"
+            android:label="@string/rent"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".news"
+            android:label="@string/news"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

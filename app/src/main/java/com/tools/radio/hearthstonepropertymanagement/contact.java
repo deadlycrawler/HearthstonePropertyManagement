@@ -14,6 +14,8 @@ public class contact extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contact);
+//        getActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         ImageView email = (ImageView) findViewById(R.id.email);
         ImageView phone = (ImageView) findViewById(R.id.phone);
