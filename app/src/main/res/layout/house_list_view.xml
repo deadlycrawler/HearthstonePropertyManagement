@@ -28,10 +28,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/View_of_house"
-        tools:src="@drawable/house"/>
+        android:id="@+id/houseView1"
+        android:src="@drawable/house_one"
+        android:adjustViewBounds="true"
+        tools:src="@drawable/house_one"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -41,7 +44,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:id="@+id/number_of_bedrooms"
@@ -53,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textAlignment="center"
-                tools:text="@string/beds" />
+                android:text="@string/beds" />
 
 
         </LinearLayout>
@@ -64,7 +67,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textAlignment="center"
@@ -75,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                tools:text="@string/baths" />
+                android:text="@string/baths" />
 
 
         </LinearLayout>
@@ -91,7 +94,7 @@
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:id="@+id/number_of_squarefeet"
-                tools:text="3453" />
+                android:text="3453" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -99,13 +102,18 @@
 
                 android:padding="10dp"
                 android:textAlignment="center"
-                tools:text="@string/square_feet" />
+                android:text="@string/square_feet" />
 
 
         </LinearLayout>
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"/>
 
 
 </LinearLayout>
