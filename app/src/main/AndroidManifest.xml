@@ -19,33 +19,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".contact"
             android:label="@string/contactString"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".buy"
+            android:screenOrientation="portrait"
             android:label="@string/purchaseString"
             android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".sell"
             android:label="@string/sell"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".rent"
             android:label="@string/rent"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
 
         <activity
             android:name=".news"
             android:label="@string/news"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
     </application>
 

@@ -8,4 +8,5 @@
     <color name="brick">#993300</color>
     <color name="sand">#996600</color>
     <color name="burnt">#990033</color>
+    <color name="white">#ffffff</color>
 </resources>
