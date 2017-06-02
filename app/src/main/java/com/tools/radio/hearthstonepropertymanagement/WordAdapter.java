@@ -36,7 +36,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         Word currentWord = getItem(position);
 
         TextView house_price = (TextView) listItemView.findViewById(R.id.house_price);
-        house_price.setText(currentWord.getmPrice());
+        house_price.setText("$ "+currentWord.getmPrice());
 
         TextView house_address_line_1 = (TextView) listItemView.findViewById(R.id.house_address_line_1);
         house_address_line_1.setText(currentWord.getmAddressLine1());

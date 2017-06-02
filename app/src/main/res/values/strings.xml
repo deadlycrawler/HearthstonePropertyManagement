@@ -22,6 +22,10 @@
     <string name="square_feet">SQ feet</string>
 
     <string name="View_of_house">View of house</string>
-    <string name ="available_hosues_to_purchase">buy buy buy</string>
+
+    <string name="available_houses_to_purchase">buy buy buy</string>
+
+    <string name="available_rentals">rent rent rent</string>
+
 
 </resources>
