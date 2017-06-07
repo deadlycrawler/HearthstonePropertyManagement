@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         TextView sell = (TextView) findViewById(R.id.sell);
         TextView rent = (TextView) findViewById(R.id.rent);
 
+        //buttons(textViews) on primary menu, simple click events to navigate
+
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

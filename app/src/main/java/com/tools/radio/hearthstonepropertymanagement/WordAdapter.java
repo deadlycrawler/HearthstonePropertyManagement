@@ -54,13 +54,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         }
 
-//        ImageView houseView = (ImageView) listItemView.findViewById(imageView);
-//        if (currentWord.hasImage()) {
-//            houseView.setImageResource(currentWord.getmImageResourceId());
-//            houseView.setVisibility(View.VISIBLE);
-//        } else {
-//            houseView.setVisibility(View.GONE);
-//        }
 
         TextView beds = (TextView) listItemView.findViewById(R.id.number_of_bedrooms);
         beds.setText(Integer.toString(currentWord.getmBeds()));

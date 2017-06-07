@@ -47,12 +47,6 @@ public class NewsAdapter extends ArrayAdapter<NewsLister> {
         TextView house_address_line_2 = (TextView) listItemView.findViewById(R.id.news_content);
         house_address_line_2.setText(currentNewBlurb.getmNewsSummary());
 
-
-
-
-
-
-
         return listItemView;
     }
 
