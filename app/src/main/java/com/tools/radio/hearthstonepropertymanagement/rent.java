@@ -23,7 +23,6 @@ public class rent extends AppCompatActivity {
         //takes word objects and desplays them in a list view and casts them to textviews
         WordAdapter adapter = new WordAdapter(this, words, R.color.grey);
         ListView listView = (ListView) findViewById(R.id.list);
-
         listView.setAdapter(adapter);
 
     }

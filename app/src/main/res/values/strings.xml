@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Hearthstone Property Management</string>
 
     <string name="sell">sell</string>
@@ -27,5 +28,6 @@
 
     <string name="available_rentals">rent rent rent</string>
 
+    <string name="news_header">news</string>
 
 </resources>

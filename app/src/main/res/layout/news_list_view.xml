@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="#993300"
+        android:id="@+id/new_headline"
+        tools:text="$103,500"
+        tools:textColor="#ffffff" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/View_of_house"
+        android:id="@+id/news_image"
+        android:adjustViewBounds="true"
+        tools:src="@drawable/news1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="#993300"
+        android:id="@+id/news_content"
+        tools:text="words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words"
+        tools:textColor="#ffffff" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"/>
+
+
+</LinearLayout>
