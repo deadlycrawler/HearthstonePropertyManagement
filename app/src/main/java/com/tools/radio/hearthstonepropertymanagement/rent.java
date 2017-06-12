@@ -20,8 +20,8 @@ public class rent extends AppCompatActivity {
         //TODO: tap on picture to go to street view
         //TODO: swipe left and right on immage to view other immages of same location
         //TODO: cast price of house from INT to some kinda currancy object
-        //TODO: add correction for square feet if its unlisted
         //TODO: change snapsot view "beds,baths etc." to a horizontal scrolling view. `maybe
+        //TODO: update constructers to include lat longs for each house
 
         words.add(new Word(1650, "308 E 18TH", "Portales, NM 88130", R.drawable.house_example_1, 3, 2, 1820));
         words.add(new Word(1295, "2108 s Ave G", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
