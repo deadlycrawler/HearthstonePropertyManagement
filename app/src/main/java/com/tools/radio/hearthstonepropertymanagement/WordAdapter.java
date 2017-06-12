@@ -61,8 +61,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView baths = (TextView) listItemView.findViewById(R.id.number_of_bathrooms);
         baths.setText(Integer.toString(currentWord.getmBaths()));
 
+
         TextView sqfeet = (TextView) listItemView.findViewById(R.id.number_of_squarefeet);
-        sqfeet.setText(Integer.toString(currentWord.getmSqfeet()));
+        if(currentWord.getmSqfeet()!=0){
+        sqfeet.setText(Integer.toString(currentWord.getmSqfeet()));}else {
+
+            sqfeet.setText(R.string.unavailable);
+        }
 
 
         return listItemView;

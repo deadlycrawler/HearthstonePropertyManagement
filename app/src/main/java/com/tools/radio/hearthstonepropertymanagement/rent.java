@@ -16,8 +16,15 @@ public class rent extends AppCompatActivity {
 
         final ArrayList<Word> words = new ArrayList<Word>();
 
-        words.add(new Word(103500, "777 bacon DR", "Port vill WY 29297", R.drawable.house, 3, 2, 3453));
-        words.add(new Word(247578, "777 bacon DR", "Port vill WY 29297", R.drawable.house_one, 6, 6, 6));
+        //TODO: CREATE INTENT TO GOOGLE MAPS BASED OF TAPING THE ADDRESS OF THE LOCATION
+        //TODO: tap on picture to go to street view
+        //TODO: swipe left and right on immage to view other immages of same location
+        //TODO: cast price of house from INT to some kinda currancy object
+        //TODO: add correction for square feet if its unlisted
+        //TODO: change snapsot view "beds,baths etc." to a horizontal scrolling view. `maybe
+
+        words.add(new Word(1650, "308 E 18TH", "Portales, NM 88130", R.drawable.house_example_1, 3, 2, 1820));
+        words.add(new Word(1295, "2108 s Ave G", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
 
 
         //takes word objects and desplays them in a list view and casts them to textviews

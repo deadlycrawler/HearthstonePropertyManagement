@@ -30,4 +30,6 @@
 
     <string name="news_header">news</string>
 
+    <string name ="unavailable">unavailable</string>
+
 </resources>
