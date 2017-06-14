@@ -1,8 +1,12 @@
 package com.tools.radio.hearthstonepropertymanagement;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,6 +36,21 @@ public class rent extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
 
+        //added button clicks to the whole section in a listView
+        //TODO: segregate the action events baised on what is clicked int he listView
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+                Word word = words.get(position);
+
+                showToast();
+
+            }
+        });
+    }
+    protected  void showToast(){
+        Toast Toast = new Toast(rent.this);
+        Toast.makeText(rent.this,"Audio Playing",Toast.LENGTH_SHORT).show();
     }
 
 }
