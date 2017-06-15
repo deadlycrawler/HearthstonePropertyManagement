@@ -48,6 +48,14 @@ public class Word {
 
         return mImageResourceId;
     }
+    public String getGoogleMapsAddress(){
+
+        String googleURIText="google.navigation:q=";
+        String addressLine1=this.mAddressLine1+",+";
+        String addressLine2=this.mAddressLine2;
+
+        return googleURIText+addressLine1+addressLine2;
+    }
 
 
     public boolean hasImage() {
