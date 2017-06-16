@@ -88,6 +88,18 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         }
 
+        // was used to add click event to the Image in the rentList/BuyLIstViews
+//        houseView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Uri gmmIntentUri = Uri.parse(currentWord.getGoogleMapsStreetView());
+//                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+//                mapIntent.setPackage("com.google.android.apps.maps");
+//                getContext().startActivity(mapIntent);
+//            }
+//
+//        });
 
         TextView beds = (TextView) listItemView.findViewById(R.id.number_of_bedrooms);
         beds.setText(Integer.toString(currentWord.getmBeds()));

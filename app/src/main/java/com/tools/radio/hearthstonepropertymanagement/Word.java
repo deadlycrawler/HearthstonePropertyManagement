@@ -7,6 +7,7 @@ public class Word {
     private int mPrice, mBeds, mBaths, mSqfeet;
     private String mAddressLine1, mAddressLine2;
     private int mImageResourceId = NO_IMAGE_PROVIDED;
+    //private String mLat, mLong;
 
 
     public Word(int price, String AddressLine1, String AddressLine2, int ImageResourceId, int beds, int baths, int sqfeet) {
@@ -17,11 +18,14 @@ public class Word {
         this.mSqfeet = sqfeet;
         this.mAddressLine1 = AddressLine1;
         this.mAddressLine2 = AddressLine2;
+//        this.mLat=lat;
+//        this.mLong=Long;
+
 
     }
 
     public String getmPrice() {
-        return Integer.toString(mPrice) ;
+        return Integer.toString(mPrice);
     }
 
     public int getmBeds() {
@@ -48,14 +52,25 @@ public class Word {
 
         return mImageResourceId;
     }
-    public String getGoogleMapsAddress(){
 
-        String googleURIText="google.navigation:q=";
-        String addressLine1=this.mAddressLine1+",+";
-        String addressLine2=this.mAddressLine2;
+    public String getGoogleMapsAddress() {
 
-        return googleURIText+addressLine1+addressLine2;
+        String part1 = "google.navigation:q=";
+        String part2 = this.mAddressLine1 + ",+";
+        String part3 = this.mAddressLine2;
+
+        return part1 + part2 + part3;
     }
+// potential use as a way to get to google maps
+//    public String getGoogleMapsStreetView() {
+//
+//        String part1 = "google.streetview:cbll=";
+//
+//        String part2 = this.mLat + ",+";
+//        String part3 = this.mLong;
+//
+//        return "part1+part2+part3";
+//    }
 
 
     public boolean hasImage() {
