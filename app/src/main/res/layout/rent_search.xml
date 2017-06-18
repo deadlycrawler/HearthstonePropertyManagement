@@ -43,6 +43,16 @@
             android:hint="@string/prompt_no_max" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:id="@+id/rentViewAll"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:text="@string/view_all"/>
+
 
 
 </LinearLayout>

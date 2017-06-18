@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //TODO: UDPATE 'HOME' ICON AND INCLUDE A BACK
+
         TextView contact = (TextView) findViewById(R.id.contact);
         TextView news = (TextView) findViewById(R.id.news);
         TextView buy = (TextView) findViewById(R.id.buy);
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         rent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, rent.class);
+                Intent i = new Intent(MainActivity.this, rent_search.class);
                 startActivity(i);
             }
         });

@@ -48,6 +48,12 @@
             android:parentActivityName=".MainActivity" />
 
         <activity
+            android:name=".rent_search"
+            android:label="@string/rent"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
             android:name=".news"
             android:label="@string/news"
             android:screenOrientation="portrait"
