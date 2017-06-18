@@ -5,7 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class rent_search extends AppCompatActivity {
     @Override
@@ -14,8 +18,22 @@ public class rent_search extends AppCompatActivity {
         setContentView(R.layout.rent_search);
 
 
-        TextView viewAll = (TextView) findViewById(R.id.rentViewAll);
 
+        //first spinner for house type
+        Spinner dropdown = (Spinner)findViewById(R.id.houseType);
+
+        final ArrayList<String> dropdownLIst = new ArrayList<String>();
+
+        dropdownLIst.add(getString(R.string.any));
+        dropdownLIst.add(getString(R.string.house));
+        dropdownLIst.add(getString(R.string.condo));
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, dropdownLIst);
+        dropdown.setAdapter(adapter);
+
+
+        // tap to view all properties
+        TextView viewAll = (TextView) findViewById(R.id.rentViewAll);
 
         viewAll.setOnClickListener(new View.OnClickListener() {
             @Override
