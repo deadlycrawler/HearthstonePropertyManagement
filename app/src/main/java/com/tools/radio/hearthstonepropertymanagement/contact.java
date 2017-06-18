@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class contact extends AppCompatActivity {
 
@@ -16,15 +18,34 @@ public class contact extends AppCompatActivity {
         setContentView(R.layout.contact);
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //TODO: add contact card for homespot
-        //TODO: enable navigation in google maps to office address
-        // address: 42479 US HWY 70, Portales, NM 88130
+        //TODO: add contact card for homespot *in progress*
 
+
+        // address: 42479 US HWY 70, Portales, NM 88130
 
         ImageView email = (ImageView) findViewById(R.id.email);
         ImageView phone = (ImageView) findViewById(R.id.phone);
+        TextView address = (TextView) findViewById(R.id.office_address);
+
+        //adds an underline to the address so that its obvious that its a link
+        //TODO: identify a modern way to let the user know that you can navigate by taping the address
+        String underlineAddresss = "<u>42479 US Hwy 70\nPortales, NM 88130</u>";
+        address.setText(Html.fromHtml(underlineAddresss));
 
 
+        //intent to google maps to navigate to there office
+        address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri gmmIntentUri = Uri.parse("google.navigation:q=42479 US Hwy 70,Portales, NM 88130");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+
+        });
+
+        //Click Listener for the Email Button
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +54,7 @@ public class contact extends AppCompatActivity {
             }
         });
 
+        //Click Listener for the call Button
         phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,11 +77,8 @@ public class contact extends AppCompatActivity {
         }
     }
 
-    public String emailContent() {
-        String emailContent = getString(R.string.emailContent);
-        return emailContent;
-    }
 
+    //Methods for contacting homespot
     private String[] Address() {
         String[] emailAddresses = {"Deadlycrawler2@gmail.com"};
         return emailAddresses;
@@ -70,9 +89,14 @@ public class contact extends AppCompatActivity {
     }
 
     //intent to Dial a number
-
     private void dialOffice(final String phoneNumber) {
         startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phoneNumber, null)));
+    }
+
+    //method for email content
+    public String emailContent() {
+        String emailContent = getString(R.string.emailContent);
+        return emailContent;
     }
 
 }

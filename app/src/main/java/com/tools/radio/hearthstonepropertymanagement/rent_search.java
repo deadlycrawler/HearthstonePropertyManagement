@@ -17,18 +17,18 @@ public class rent_search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rent_search);
 
-
+            //TODO: finish the search page
 
         //first spinner for house type
         Spinner dropdown = (Spinner)findViewById(R.id.houseType);
 
-        final ArrayList<String> dropdownLIst = new ArrayList<String>();
+        final ArrayList<String> dropdownLIst = new ArrayList<>();
 
         dropdownLIst.add(getString(R.string.any));
         dropdownLIst.add(getString(R.string.house));
         dropdownLIst.add(getString(R.string.condo));
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, dropdownLIst);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, dropdownLIst);
         dropdown.setAdapter(adapter);
 
 

@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //TODO: UDPATE 'HOME' ICON AND INCLUDE A BACK
 
         TextView contact = (TextView) findViewById(R.id.contact);
         TextView news = (TextView) findViewById(R.id.news);
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         TextView rent = (TextView) findViewById(R.id.rent);
 
         //buttons(textViews) on primary menu, simple click events to navigate
-
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

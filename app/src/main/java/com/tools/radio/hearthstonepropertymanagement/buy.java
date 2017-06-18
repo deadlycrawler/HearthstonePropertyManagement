@@ -14,7 +14,7 @@ public class buy extends AppCompatActivity {
         setContentView(R.layout.buy_list);
 
         final ArrayList<Word> words = new ArrayList<Word>();
-
+        //TODO: add a search page for buying houses
         //TODO: CREATE INTENT TO GOOGLE MAPS BASED OF TAPING THE ADDRESS OF THE LOCATION
         //place holder data
         words.add(new Word(103500, "777 bacon DR", "Port vill WY 29297", R.drawable.house_one, 3, 2, 3453));

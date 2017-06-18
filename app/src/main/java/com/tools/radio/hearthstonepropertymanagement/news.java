@@ -13,6 +13,8 @@ public class news extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_list);
 
+
+        //TODO: find out if this page needs to exist
         final ArrayList<NewsLister> news = new ArrayList<NewsLister>();
         //placeholder data
         news.add(new NewsLister(R.drawable.news1,"Drones droning in drone land","lots and lots of text that is full of text refrences to text used to fill up space and simulate a news article"));
