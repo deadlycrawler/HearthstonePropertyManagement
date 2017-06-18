@@ -16,9 +16,9 @@
 
     <string name="emailSubject">Regarding your properties</string>
 
-    <string name="beds">beds</string>
+    <string name="beds">Beds</string>
 
-    <string name="baths">baths</string>
+    <string name="baths">Baths</string>
 
     <string name="square_feet">SQ feet</string>
 
@@ -30,6 +30,23 @@
 
     <string name="news_header">news</string>
 
-    <string name ="unavailable">unavailable</string>
+    <string name="unavailable">unavailable</string>
+    <string name="min_price">Min Price</string>
+    <string name="max_price">Max Price</string>
+    <string name="price_range">Select Price Range</string>
+    <string name="required_features">required features</string>
+    <string name="sq_ft_range">SQ. FT Range</string>
+    <string name="prompt_no_min">no min</string>
+    <string name="prompt_no_max">no Max</string>
+    <string name="any">any</string>
+    <string name="fireplace">fireplace</string>
+    <string name="garage">Garage</string>
+    <string name="property_type">property type</string>
+    <string name="house">house</string>
+    <string name="condo">condo</string>
+    <string name="house_condo">house/condo</string>
+    <string name="view_all">view all</string>
+    <string name="rental_propety_search">Rental Property Search</string>
+
 
 </resources>
