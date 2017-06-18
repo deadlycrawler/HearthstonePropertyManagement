@@ -16,6 +16,10 @@ public class contact extends AppCompatActivity {
         setContentView(R.layout.contact);
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //TODO: add contact card for homespot
+        //TODO: enable navigation in google maps to office address
+        // address: 42479 US HWY 70, Portales, NM 88130
+
 
         ImageView email = (ImageView) findViewById(R.id.email);
         ImageView phone = (ImageView) findViewById(R.id.phone);
