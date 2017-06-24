@@ -20,16 +20,32 @@ public class rent_search extends AppCompatActivity {
             //TODO: finish the search page
 
         //first spinner for house type
-        Spinner dropdown = (Spinner)findViewById(R.id.houseType);
+        Spinner homeStyleDropdown = (Spinner)findViewById(R.id.houseType);
+        Spinner locationDropdown= (Spinner)findViewById(R.id.cityLocation);
 
-        final ArrayList<String> dropdownLIst = new ArrayList<>();
 
-        dropdownLIst.add(getString(R.string.any));
-        dropdownLIst.add(getString(R.string.house));
-        dropdownLIst.add(getString(R.string.condo));
+        //values for home Style(condo/house) spinner
+        final ArrayList<String> homeStyledropdownLIst = new ArrayList<>();
+        homeStyledropdownLIst.add(getString(R.string.any));
+        homeStyledropdownLIst.add(getString(R.string.house));
+        homeStyledropdownLIst.add(getString(R.string.condo));
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, dropdownLIst);
-        dropdown.setAdapter(adapter);
+        ArrayAdapter<String> homeStyleDropDown_Adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, homeStyledropdownLIst);
+        homeStyleDropdown.setAdapter(homeStyleDropDown_Adapter);
+
+
+        //values for citylocationDropdown
+
+        final ArrayList<String> cityLocationDropdownLIst = new ArrayList<>();
+        cityLocationDropdownLIst.add(getString(R.string.any));
+        cityLocationDropdownLIst.add(getString(R.string.clovis));
+        cityLocationDropdownLIst.add(getString(R.string.portales));
+
+        ArrayAdapter<String> locationDropdown_adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, cityLocationDropdownLIst);
+        locationDropdown.setAdapter(locationDropdown_adapter);
+
+
+
 
 
         // tap to view all properties
