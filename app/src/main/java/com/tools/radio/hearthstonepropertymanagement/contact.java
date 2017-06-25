@@ -19,6 +19,7 @@ public class contact extends AppCompatActivity {
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         //TODO: add contact card for homespot *in progress*
+        //TODO: add intent to open up his personal website on click of image
 
 
         // address: 42479 US HWY 70, Portales, NM 88130

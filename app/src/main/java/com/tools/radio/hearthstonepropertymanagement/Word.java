@@ -5,7 +5,8 @@ public class Word {
 
     private static final int NO_IMAGE_PROVIDED = -1;
     private int mPrice, mBeds, mBaths, mSqfeet;
-    private String mAddressLine1, mAddressLine2;
+    private String mAddressLine1;
+    private String mAddressLine2;
     private int mImageResourceId = NO_IMAGE_PROVIDED;
     //private String mLat, mLong;
 

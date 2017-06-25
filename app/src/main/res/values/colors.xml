@@ -9,4 +9,6 @@
     <color name="sand">#996600</color>
     <color name="burnt">#990033</color>
     <color name="white">#ffffff</color>
+
+    <color name="tan_background">#ebdab5</color>
 </resources>
