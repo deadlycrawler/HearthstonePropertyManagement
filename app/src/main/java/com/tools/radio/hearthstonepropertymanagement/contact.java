@@ -20,6 +20,7 @@ public class contact extends AppCompatActivity {
 
         //TODO: add contact card for homespot *in progress*
         //TODO: add intent to open up his personal website on click of image
+        //TODO: update art to match app theme
 
 
         // address: 42479 US HWY 70, Portales, NM 88130
