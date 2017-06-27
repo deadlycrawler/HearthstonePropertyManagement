@@ -8,20 +8,20 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="254dp"
+        android:layout_height="235dp"
         android:src="@drawable/b_face" />
 
 
-    <TextView
-        android:id="@+id/office_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="15dp"
-        android:textAlignment="center"
-        android:textColor="#0000EE"
-        android:textSize="35dp"
-        tools:text="address\nadress" />
+    <!--<TextView-->
+    <!--android:id="@+id/office_address"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textColor="#0000EE"-->
+    <!--android:textSize="35dp"-->
+    <!--tools:text="address\nadress" />-->
 
 
     <LinearLayout
@@ -34,21 +34,38 @@
             android:id="@+id/phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:src="@drawable/ic_phone_white_48dp" />
 
         <ImageView
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:src="@drawable/ic_mail_outline_white_48dp" />
+
+        <ImageView
+            android:id="@+id/office_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_location_on_white_48dp" />
 
 
     </LinearLayout>
-    <ImageView
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/aboutUs"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+    <ImageView
         android:id="@+id/seal"
-        android:src="@mipmap/ic_launcher"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
 
 
 </LinearLayout>

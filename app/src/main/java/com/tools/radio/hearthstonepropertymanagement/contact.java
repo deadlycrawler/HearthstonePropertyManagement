@@ -27,12 +27,15 @@ public class contact extends AppCompatActivity {
         ImageView email = (ImageView) findViewById(R.id.email);
         ImageView phone = (ImageView) findViewById(R.id.phone);
         ImageView seal = (ImageView) findViewById(R.id.seal);
-        TextView address = (TextView) findViewById(R.id.office_address);
+//        TextView address = (TextView) findViewById(R.id.office_address);
+        ImageView address = (ImageView) findViewById(R.id.office_address);
+
 
         //adds an underline to the address so that its obvious that its a link
-        //TODO: identify a modern way to let the user know that you can navigate by taping the address
-        String underlineAddresss = "<u>42479 US Hwy 70\nPortales, NM 88130</u>";
-        address.setText(Html.fromHtml(underlineAddresss));
+
+        //old code that would underline and display the whole address
+//        String underlineAddresss = "<u>42479 US Hwy 70\nPortales, NM 88130</u>";
+//        address.setText(Html.fromHtml(underlineAddresss));
 
 
         //intent to google maps to navigate to there office
