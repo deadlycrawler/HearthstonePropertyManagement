@@ -15,7 +15,7 @@ public class seal extends AppCompatActivity {
         TextView sealText = (TextView) findViewById(R.id.sealText);
 
         sealText.setText(
-                R.string.sealingWaxP1 + "\n\n" + R.string.sealingWaxP2 + "\n\n" + R.string.sealingWaxP3 + "\n\n" + R.string.sealingWaxP4 + "\n\n" + R.string.sealingWaxP5 + "\n\n" + R.string.sealingWaxP6);
+                getString(R.string.sealingWaxP1) + "\n\n" + getString(R.string.sealingWaxP2) + "\n\n" + getString(R.string.sealingWaxP3) + "\n\n" + getString(R.string.sealingWaxP4) + "\n\n" + getString(R.string.sealingWaxP5) + "\n\n" + getString(R.string.sealingWaxP6));
 
     }
 }
