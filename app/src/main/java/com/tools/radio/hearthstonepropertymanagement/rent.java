@@ -24,7 +24,7 @@ public class rent extends AppCompatActivity {
         //TODO: tap on picture to go to street view
         //TODO: swipe left and right on image to view other images of same location
         //TODO: cast price of house from INT to some kinda currency object
-        //TODO: change snapsot view "beds,baths etc." to a horizontal scrolling view. `maybe
+        //TODO: change snapsot view "beds,baths etc." to a horizontal scrolling view.
         //TODO: combine the address together into a single linear layout to simplify code,
         //TODO: update constructor for Word.java to include a lat long
         //TODO: examain ways to include a lat long converter from decimal degrees mins secs to degress decimal to put into google streetView intent

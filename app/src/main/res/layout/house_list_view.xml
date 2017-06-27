@@ -3,31 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/tan_background"
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:background="#993300"
+        tools:background="@color/burnt"
+        android:textSize="20dp"
         android:id="@+id/house_price"
+        android:textAlignment="center"
         tools:text="$103,500"
         tools:textColor="#ffffff" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/house_address_line_1"
-        android:textStyle="bold"
-        android:textColor="#0000ff"
-        android:layout_marginTop="10dp"
-        tools:text="777 bacon DR" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/house_address_line_2"
-        android:textColor="#0000ff"
-        android:layout_marginBottom="10dp"
-        tools:text="Port vill WY 29297" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -38,9 +26,28 @@
         android:adjustViewBounds="true"
         tools:src="@drawable/house_one"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/house_address_line_1"
+        android:textStyle="bold"
+        android:textColor="#0000ff"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        tools:text="777 bacon DR" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/house_address_line_2"
+        android:textColor="#0000ff"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        tools:text="Port vill WY 29297" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -104,7 +111,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:padding="10dp"
                 android:textAlignment="center"
                 android:text="@string/square_feet" />
@@ -114,11 +120,6 @@
 
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black"/>
 
 
 </LinearLayout>
