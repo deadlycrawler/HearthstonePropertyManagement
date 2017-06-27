@@ -26,6 +26,7 @@ public class contact extends AppCompatActivity {
 
         ImageView email = (ImageView) findViewById(R.id.email);
         ImageView phone = (ImageView) findViewById(R.id.phone);
+        ImageView seal = (ImageView) findViewById(R.id.seal);
         TextView address = (TextView) findViewById(R.id.office_address);
 
         //adds an underline to the address so that its obvious that its a link
@@ -61,6 +62,15 @@ public class contact extends AppCompatActivity {
             public void onClick(View view) {
 
                 dialOffice("5306324507");
+            }
+        });
+
+        seal.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(contact.this, seal.class);
+                startActivity(i);
+
             }
         });
     }

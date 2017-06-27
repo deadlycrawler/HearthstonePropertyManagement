@@ -57,6 +57,12 @@
             android:label="@string/news"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".seal"
+            android:label="@string/waxLabel"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

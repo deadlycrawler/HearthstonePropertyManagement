@@ -8,8 +8,8 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="241dp"
-        android:src="@drawable/temp_stock_photo_portrit" />
+        android:layout_height="254dp"
+        android:src="@drawable/b_face" />
 
 
     <TextView
@@ -44,6 +44,11 @@
 
 
     </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seal"
+        android:src="@mipmap/ic_launcher"/>
 
 
 </LinearLayout>
