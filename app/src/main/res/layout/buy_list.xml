@@ -4,11 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/available_houses_to_purchase"
-        style="@style/headerTheme"/>
+
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/list"
     android:orientation="vertical"

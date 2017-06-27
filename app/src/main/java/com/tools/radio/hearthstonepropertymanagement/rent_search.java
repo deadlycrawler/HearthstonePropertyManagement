@@ -19,6 +19,7 @@ public class rent_search extends AppCompatActivity {
 
             //TODO: finish the search page
 
+
         //first spinner for house type
         Spinner homeStyleDropdown = (Spinner)findViewById(R.id.houseType);
         Spinner locationDropdown= (Spinner)findViewById(R.id.cityLocation);
@@ -57,6 +58,20 @@ public class rent_search extends AppCompatActivity {
                 Intent i = new Intent(rent_search.this, rent.class);
                 startActivity(i);
             }
+        });
+
+
+        //search function
+
+        TextView search = (TextView) findViewById(R.id.rentSearch);
+
+        search.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+
+            }
+
         });
 
 
