@@ -25,11 +25,10 @@ public class rent extends AppCompatActivity {
 
         //TODO: tap on picture to go to street view
         //TODO: swipe left and right on image to view other images of same location
-        //TODO: cast price of house from INT to some kinda currency object
-        //TODO: change snapsot view "beds,baths etc." to a horizontal scrolling view.
+        //TODO: change snapshot view "beds,baths etc." to a horizontal scrolling view.
         //TODO: combine the address together into a single linear layout to simplify code,
         //TODO: update constructor for Word.java to include a lat long
-        //TODO: examain ways to include a lat long converter from decimal degrees mins secs to degress decimal to put into google streetView intent
+        //TODO: examine ways to include a lat long converter from decimal degrees mins secs to degress decimal to put into google streetView intent
         //TODO: create search menu template for the rent/buy pages, *inProgress*
         //TODO: CREATE SEPERATE results page that narrows results basied of of paramaters entered in the rent search page, recomend posting the same words constructer but filter it based off results
         //TODO: update word constuctor to include firepalce and garage

@@ -19,6 +19,10 @@ public class rent_search extends AppCompatActivity {
 
             //TODO: finish the search page
 
+        //TODO: create getter and setter for word list to throw data to the rent results page(WIP)
+        //TODO: have rent.java become the adapter once the data is pushed to it and display the available houses
+        //TODO: remove(comment out) View all buttom once the search function works correctly
+
 
         //first spinner for house type
         Spinner homeStyleDropdown = (Spinner)findViewById(R.id.houseType);
