@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+
+//TODO: change splash screen to his seal and have a highlight on his brand
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
