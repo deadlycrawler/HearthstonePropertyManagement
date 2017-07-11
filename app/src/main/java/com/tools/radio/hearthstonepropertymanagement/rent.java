@@ -32,6 +32,7 @@ public class rent extends AppCompatActivity {
         //TODO: create search menu template for the rent/buy pages, *inProgress*
         //TODO: CREATE SEPERATE results page that narrows results basied of of paramaters entered in the rent search page, recomend posting the same words constructer but filter it based off results
         //TODO: update word constuctor to include firepalce and garage
+        //TODO: add data to SQL database instead so that the resuls are easaly searchable
 
         final ArrayList<Word> words = new ArrayList<Word>();
 
