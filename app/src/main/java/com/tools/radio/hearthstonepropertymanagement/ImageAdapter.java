@@ -40,7 +40,7 @@ public class ImageAdapter extends ArrayAdapter<Images> {
         ImageView houseView = (ImageView) listItemView.findViewById(R.id.singleHouseImage);
 
 
-            houseView.setImageResource(R.drawable.house_example_1);
+            houseView.setImageResource(currentHouse.getmImageResourceId2());
 
             if (currentHouse.hasImage()) {
                 houseView.setVisibility(View.VISIBLE);

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.io.IOException;
@@ -19,6 +20,8 @@ import static java.security.AccessController.getContext;
 
 public class rent extends AppCompatActivity {
 
+//    public static int ImageHeight;
+//    public static int ImageWidth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +42,23 @@ public class rent extends AppCompatActivity {
 
         final ArrayList<House> houses = new ArrayList<House>();
 
-        //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet)
+
 
         //TODO: loop through immages associated with a house, and add all the immages into the below arraylist
         ArrayList<Images> houseImageLocations = new ArrayList<>();
 
+        //placeholder
         houseImageLocations.add(new Images(R.drawable.house_example_1));
         houseImageLocations.add(new Images(R.drawable.house_example_2));
 
+
+
+//        ImageView templateImage = new ImageView(this);
+//        templateImage.setImageDrawable(getResources().getDrawable(R.drawable.house_example_1));
+//        ImageHeight =  templateImage.getHeight();
+//        ImageWidth=  templateImage.getWidth();
+
+        //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet)
         houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", houseImageLocations, 2, 2, 1000));
 //        houses.add(new House(1295, "1802 W University", "Portales, NM 88130",R.drawable.house_example_2, 3, 2, 0));
 //        houses.add(new House(1295, "1514 s Ave A", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1685));
@@ -61,7 +73,7 @@ public class rent extends AppCompatActivity {
         //takes word objects and desplays them in a list view and casts them to textviews
         HouseAdapter adapter = new HouseAdapter(this, houses, R.color.grey);
         ListView listView = (ListView) findViewById(R.id.list);
-//        listView.setRotation(-90);
+
         listView.setAdapter(adapter);
 
 

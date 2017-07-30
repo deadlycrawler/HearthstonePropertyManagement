@@ -10,6 +10,7 @@ import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -90,8 +91,9 @@ public class HouseAdapter extends ArrayAdapter<House> {
         ImageAdapter adapter = new ImageAdapter((Activity) this.getContext(), currentHouse.getmHouseImageLocations(), R.color.grey);
 
         ListView listView = (ListView) listItemView.findViewById(R.id.Image_List_in_house_list_view);
-        listView.setRotation(-90);
+//        listView.setRotation(-90);
         listView.setAdapter(adapter);
+
 
         // was used to add click event to the Image in the rentList/BuyLIstViews
 //        houseView.setOnClickListener(new View.OnClickListener() {
