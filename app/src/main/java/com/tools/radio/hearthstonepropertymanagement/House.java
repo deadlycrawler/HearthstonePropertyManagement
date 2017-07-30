@@ -1,7 +1,7 @@
 package com.tools.radio.hearthstonepropertymanagement;
 
 
-public class Word {
+public class House {
 
     private static final int NO_IMAGE_PROVIDED = -1;
     private int mPrice, mBeds, mBaths, mSqfeet;
@@ -11,7 +11,7 @@ public class Word {
     //private String mLat, mLong;
 
 
-    public Word(int price, String AddressLine1, String AddressLine2, int ImageResourceId, int beds, int baths, int sqfeet) {
+    public House(int price, String AddressLine1, String AddressLine2, int ImageResourceId, int beds, int baths, int sqfeet) {
         this.mPrice = price;
         this.mImageResourceId = ImageResourceId;
         this.mBeds = beds;

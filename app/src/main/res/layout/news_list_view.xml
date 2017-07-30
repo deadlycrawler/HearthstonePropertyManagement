@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         tools:background="#993300"
         android:id="@+id/news_content"
-        tools:text="words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words words"
+        tools:text="houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses houses"
         tools:textColor="#ffffff" />
 
 
