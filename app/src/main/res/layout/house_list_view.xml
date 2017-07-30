@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/tan_background"
     android:orientation="vertical">
 
@@ -17,14 +17,20 @@
         tools:text="$103,500" />
 
 
-    <ImageView
-        android:id="@+id/houseView1"
+    <!--<ImageView-->
+        <!--android:id="@+id/houseView1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:contentDescription="@string/View_of_house"-->
+        <!--android:src="@drawable/house_one"-->
+        <!--tools:src="@drawable/house_one" />-->
+
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/View_of_house"
-        android:src="@drawable/house_one"
-        tools:src="@drawable/house_one" />
+        android:id="@+id/Image_List_in_house_list_view">
+    </ListView>
 
     <TextView
         android:id="@+id/house_address_line_1"

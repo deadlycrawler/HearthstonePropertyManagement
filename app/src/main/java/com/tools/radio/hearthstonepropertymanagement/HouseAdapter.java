@@ -6,14 +6,18 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.tools.radio.hearthstonepropertymanagement.R.string.beds;
 
-public class HouseAdapter extends ArrayAdapter<House>{
+
+public class HouseAdapter extends ArrayAdapter<House> {
 
     private int mColorResourceId;
 
@@ -26,12 +30,12 @@ public class HouseAdapter extends ArrayAdapter<House>{
 
 
     @Override
+
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.house_list_view, parent, false);
         }
-
 
         final House currentHouse = getItem(position);
 
@@ -74,14 +78,20 @@ public class HouseAdapter extends ArrayAdapter<House>{
 
         });
 
-        ImageView houseView = (ImageView) listItemView.findViewById(R.id.houseView1);
-        houseView.setImageResource(currentHouse.getmImageResourceId());
-        if (currentHouse.hasImage()) {
-            houseView.setVisibility(View.VISIBLE);
-        } else {
-            houseView.setVisibility(View.GONE);
+//        ImageView houseView = (ImageView) listItemView.findViewById(R.id.houseView1);
+//        houseView.setImageResource(currentHouse.getmImageResourceId());
+//        if (currentHouse.hasImage()) {
+//            houseView.setVisibility(View.VISIBLE);
+//        } else {
+//            houseView.setVisibility(View.GONE);
+//
+//        }
 
-        }
+        ImageAdapter adapter = new ImageAdapter((Activity) this.getContext(), currentHouse.getmHouseImageLocations(), R.color.grey);
+
+        ListView listView = (ListView) listItemView.findViewById(R.id.Image_List_in_house_list_view);
+        listView.setRotation(-90);
+        listView.setAdapter(adapter);
 
         // was used to add click event to the Image in the rentList/BuyLIstViews
 //        houseView.setOnClickListener(new View.OnClickListener() {

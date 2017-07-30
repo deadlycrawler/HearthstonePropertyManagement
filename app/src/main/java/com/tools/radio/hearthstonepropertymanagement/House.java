@@ -1,6 +1,8 @@
 package com.tools.radio.hearthstonepropertymanagement;
 
 
+import java.util.ArrayList;
+
 public class House {
 
     private static final int NO_IMAGE_PROVIDED = -1;
@@ -9,16 +11,19 @@ public class House {
     private String mAddressLine2;
     private int mImageResourceId = NO_IMAGE_PROVIDED;
     //private String mLat, mLong;
+    private ArrayList<Images> mHouseImageLocations;
 
 
-    public House(int price, String AddressLine1, String AddressLine2, int ImageResourceId, int beds, int baths, int sqfeet) {
+
+    public House(int price, String AddressLine1, String AddressLine2, ArrayList<Images> houseImageLocations, int beds, int baths, int sqfeet) {
         this.mPrice = price;
-        this.mImageResourceId = ImageResourceId;
+       // this.mImageResourceId = ImageResourceId;
         this.mBeds = beds;
         this.mBaths = baths;
         this.mSqfeet = sqfeet;
         this.mAddressLine1 = AddressLine1;
         this.mAddressLine2 = AddressLine2;
+        this.mHouseImageLocations=houseImageLocations;
 //        this.mLat=lat;
 //        this.mLong=Long;
 
@@ -52,6 +57,10 @@ public class House {
     public int getmImageResourceId() {
 
         return mImageResourceId;
+    }
+
+    public ArrayList<Images> getmHouseImageLocations() {
+        return mHouseImageLocations;
     }
 
     public String getGoogleMapsAddress() {

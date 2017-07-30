@@ -20,13 +20,10 @@ import static java.security.AccessController.getContext;
 public class rent extends AppCompatActivity {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rent_list);
-
-
 
 
         //TODO: tap on picture to go to street view
@@ -44,36 +41,28 @@ public class rent extends AppCompatActivity {
 
         //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet)
 
-        houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", R.drawable.house_example_2, 2, 2, 1000));
-        houses.add(new House(1295, "1802 W University", "Portales, NM 88130",R.drawable.house_example_2, 3, 2, 0));
-        houses.add(new House(1295, "1514 s Ave A", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1685));
-        houses.add(new House(1295, "2108 s Ave G", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
-        houses.add(new House(1395, "1918 S Main", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
-        houses.add(new House(1495, "1101 Libra Drive", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
-        houses.add(new House(1495, "1900 Libra Drive", "Portales, NM 88130", R.drawable.house_example_2, 0, 0, 0));
-        houses.add(new House(1500, "430 E University", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1918));
-        houses.add(new House(1650, "308 E 18TH", "Portales, NM 88130", R.drawable.house_example_1, 3, 2, 1820));
-
-
         //TODO: loop through immages associated with a house, and add all the immages into the below arraylist
-        ArrayList<Integer> houseImageLocations = new ArrayList<>();
+        ArrayList<Images> houseImageLocations = new ArrayList<>();
 
+        houseImageLocations.add(new Images(R.drawable.house_example_1));
+        houseImageLocations.add(new Images(R.drawable.house_example_2));
 
-        //TODO: take all the immage locations into a single object so that they can be used in the constructer for House.java
-        ArrayList<houseImageLocations> houesImages = new ArrayList<>();
-
-        /*TODO insert houseImages arrayList into th HOUSE constructer and change the word addapter  to include the list view and add each immage into it and have the iimages rotate 90 degreese try nesting the below listView into the HouseAdapter*/
-
-
+        houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", houseImageLocations, 2, 2, 1000));
+//        houses.add(new House(1295, "1802 W University", "Portales, NM 88130",R.drawable.house_example_2, 3, 2, 0));
+//        houses.add(new House(1295, "1514 s Ave A", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1685));
+//        houses.add(new House(1295, "2108 s Ave G", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
+//        houses.add(new House(1395, "1918 S Main", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
+//        houses.add(new House(1495, "1101 Libra Drive", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
+//        houses.add(new House(1495, "1900 Libra Drive", "Portales, NM 88130", R.drawable.house_example_2, 0, 0, 0));
+//        houses.add(new House(1500, "430 E University", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1918));
+//        houses.add(new House(1650, "308 E 18TH", "Portales, NM 88130", R.drawable.house_example_1, 3, 2, 1820));
 
 
         //takes word objects and desplays them in a list view and casts them to textviews
-    HouseAdapter adapter = new HouseAdapter(this, houses, R.color.grey);
+        HouseAdapter adapter = new HouseAdapter(this, houses, R.color.grey);
         ListView listView = (ListView) findViewById(R.id.list);
 //        listView.setRotation(-90);
         listView.setAdapter(adapter);
-
-
 
 
     }

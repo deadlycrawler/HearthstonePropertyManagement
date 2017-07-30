@@ -16,9 +16,18 @@ public class buy extends AppCompatActivity {
         final ArrayList<House> houses = new ArrayList<House>();
         //TODO: add a search page for buying houses
         //TODO: CREATE INTENT TO GOOGLE MAPS BASED OF TAPING THE ADDRESS OF THE LOCATION
+
+
+        //place holder houses
+        ArrayList<Images> houseImageLocations = new ArrayList<>();
+
+        houseImageLocations.add(new Images(R.drawable.house_example_1));
+        houseImageLocations.add(new Images(R.drawable.house_example_2));
+
         //place holder data
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", R.drawable.house_one, 3, 2, 3453));
-        houses.add(new House(247578, "666 bacon DR", "Port vill WY 29297", R.drawable.house, 6, 6, 6));
+
+        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations, 3, 2, 3453));
+        houses.add(new House(247578, "666 bacon DR", "Port vill WY 29297", houseImageLocations, 6, 6, 6));
 
 
         //takes word objects and desplays them in a list view and casts them to textviews
