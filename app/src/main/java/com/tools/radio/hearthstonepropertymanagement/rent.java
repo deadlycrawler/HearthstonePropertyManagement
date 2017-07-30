@@ -1,10 +1,20 @@
 package com.tools.radio.hearthstonepropertymanagement;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+
+import static java.security.AccessController.getContext;
 
 
 public class rent extends AppCompatActivity {
@@ -35,7 +45,7 @@ public class rent extends AppCompatActivity {
         //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet)
 
         houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", R.drawable.house_example_2, 2, 2, 1000));
-        houses.add(new House(1295, "1802 W University", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
+        houses.add(new House(1295, "1802 W University", "Portales, NM 88130",R.drawable.house_example_2, 3, 2, 0));
         houses.add(new House(1295, "1514 s Ave A", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1685));
         houses.add(new House(1295, "2108 s Ave G", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
         houses.add(new House(1395, "1918 S Main", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
@@ -58,10 +68,11 @@ public class rent extends AppCompatActivity {
 
 
         //takes word objects and desplays them in a list view and casts them to textviews
-        HouseAdapter adapter = new HouseAdapter(this, houses, R.color.grey);
+    HouseAdapter adapter = new HouseAdapter(this, houses, R.color.grey);
         ListView listView = (ListView) findViewById(R.id.list);
 //        listView.setRotation(-90);
         listView.setAdapter(adapter);
+
 
 
 
