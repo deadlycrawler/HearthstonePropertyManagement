@@ -12,9 +12,6 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-/**
- * Created by John on 7/30/2017.
- */
 
 public class ImageAdapter extends ArrayAdapter<Images> {
 
@@ -39,8 +36,10 @@ public class ImageAdapter extends ArrayAdapter<Images> {
 
         ImageView houseView = (ImageView) listItemView.findViewById(R.id.singleHouseImage);
 
-
+        int width = houseView.getWidth();
+        int height = houseView.getHeight();
             houseView.setImageResource(currentHouse.getmImageResourceId2());
+
 
             if (currentHouse.hasImage()) {
                 houseView.setVisibility(View.VISIBLE);

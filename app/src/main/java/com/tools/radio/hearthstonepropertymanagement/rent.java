@@ -29,16 +29,15 @@ public class rent extends AppCompatActivity {
         setContentView(R.layout.rent_list);
 
 
-        //TODO: tap on picture to go to street view
-        //TODO: swipe left and right on image to view other images of same location
         //TODO: change snapshot view "beds,baths etc." to a horizontal scrolling view.
         //TODO: combine the address together into a single linear layout to simplify code,
-        //TODO: update constructor for House.java to include a lat long
-        //TODO: examine ways to include a lat long converter from decimal degrees mins secs to degress decimal to put into google streetView intent
         //TODO: create search menu template for the rent/buy pages, *inProgress*
         //TODO: CREATE SEPERATE results page that narrows results basied of of paramaters entered in the rent search page, recomend posting the same houses constructer but filter it based off results
-        //TODO: update word constuctor to include firepalce and garage
-        //TODO: add data to SQL database instead so that the resuls are easaly searchable
+        //TODO: add data to SQL database instead so that the resuls are easaly searchable, this might be terrible
+        //TODO: get access to homeSpot API if they got one, if not ill need to learn how to parse from a website
+
+
+
 
         final ArrayList<House> houses = new ArrayList<House>();
 
@@ -58,8 +57,8 @@ public class rent extends AppCompatActivity {
 //        ImageHeight =  templateImage.getHeight();
 //        ImageWidth=  templateImage.getWidth();
 
-        //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet)
-        houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", houseImageLocations, 2, 2, 1000));
+        //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet,garage,fireplace)
+        houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", houseImageLocations, 2, 2, 1000,false,false));
 //        houses.add(new House(1295, "1802 W University", "Portales, NM 88130",R.drawable.house_example_2, 3, 2, 0));
 //        houses.add(new House(1295, "1514 s Ave A", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1685));
 //        houses.add(new House(1295, "2108 s Ave G", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));

@@ -3,6 +3,7 @@ package com.tools.radio.hearthstonepropertymanagement;
 
 import java.util.ArrayList;
 
+
 public class House {
 
     private static final int NO_IMAGE_PROVIDED = -1;
@@ -12,10 +13,18 @@ public class House {
     private int mImageResourceId = NO_IMAGE_PROVIDED;
     //private String mLat, mLong;
     private ArrayList<Images> mHouseImageLocations;
+    private boolean mGarage;
+    private boolean mFireplace;
 
+    public boolean ismGarage() {
+        return mGarage;
+    }
 
+    public boolean ismFireplace() {
+        return mFireplace;
+    }
 
-    public House(int price, String AddressLine1, String AddressLine2, ArrayList<Images> houseImageLocations, int beds, int baths, int sqfeet) {
+    public House(int price, String AddressLine1, String AddressLine2, ArrayList<Images> houseImageLocations, int beds, int baths, int sqfeet, boolean garage, boolean firePLace) {
         this.mPrice = price;
        // this.mImageResourceId = ImageResourceId;
         this.mBeds = beds;
@@ -26,6 +35,8 @@ public class House {
         this.mHouseImageLocations=houseImageLocations;
 //        this.mLat=lat;
 //        this.mLong=Long;
+        mGarage = garage;
+        mFireplace = firePLace;
 
 
     }

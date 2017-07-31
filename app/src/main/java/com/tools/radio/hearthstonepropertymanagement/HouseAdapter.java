@@ -114,6 +114,11 @@ public class HouseAdapter extends ArrayAdapter<House> {
         TextView baths = (TextView) listItemView.findViewById(R.id.number_of_bathrooms);
         baths.setText(Integer.toString(currentHouse.getmBaths()));
 
+        TextView garage = (TextView) listItemView.findViewById(R.id.GarageBoolean);
+        if(currentHouse.ismGarage()) garage.setText(R.string.yes);else garage.setText(R.string.no);
+
+        TextView fireplace = (TextView) listItemView.findViewById(R.id.fireplaceBoolean);
+        if(currentHouse.ismFireplace()) fireplace.setText(R.string.yes);else fireplace.setText(R.string.no);
 
         TextView sqfeet = (TextView) listItemView.findViewById(R.id.number_of_squarefeet);
         if (currentHouse.getmSqfeet() != 0) {
