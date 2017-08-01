@@ -2,15 +2,15 @@
 
     <string name="app_name">Hearthstone Property Management</string>
 
-    <string name="sell">sell</string>
+    <string name="sell">sell a property</string>
 
-    <string name="rent">rent</string>
+    <string name="rent">rent a property</string>
 
     <string name="news">news</string>
 
     <string name="contactString">contact</string>
 
-    <string name="purchaseString">buy</string>
+    <string name="purchaseString">Properties available to purchase</string>
 
     <string name="emailContent">Good after noon william i would like to give you a million dollars</string>
 
