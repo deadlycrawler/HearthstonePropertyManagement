@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/tan_background"
     android:orientation="vertical">
 
     <ImageView
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="@string/aboutUs"
         android:textAlignment="center"
-        android:textColor="@color/white" />
+        android:textColor="@color/brick" />
 
     <ImageView
         android:id="@+id/seal"
