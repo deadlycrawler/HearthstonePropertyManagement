@@ -65,8 +65,7 @@ public class HouseAdapter extends ArrayAdapter<House> {
         house_address_line_2.setText(currentHouse.getmAddressLine2());
 
         //same as address line 1 added for redundancy and easier clicking, will combine when i have time
-        //TODO: combine the address together into a single linear layot to simplify code,
-        house_address_line_2.setOnClickListener(new View.OnClickListener() {
+       house_address_line_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
