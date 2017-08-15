@@ -44,11 +44,11 @@ public class rent extends AppCompatActivity {
 
 
         //TODO: loop through immages associated with a house, and add all the immages into the below arraylist
-        ArrayList<Images> houseImageLocations = new ArrayList<>();
+        ArrayList<Images> houseImageLocations1 = new ArrayList<>();
 
         //placeholder
-        houseImageLocations.add(new Images(R.drawable.house_example_1));
-        houseImageLocations.add(new Images(R.drawable.house_example_2));
+        houseImageLocations1.add(new Images(R.drawable.house_example_1));
+        houseImageLocations1.add(new Images(R.drawable.house_example_2));
 
 
 
@@ -58,7 +58,7 @@ public class rent extends AppCompatActivity {
 //        ImageWidth=  templateImage.getWidth();
 
         //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet,garage,fireplace)
-        houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", houseImageLocations, 2, 2, 1000,false,false));
+        houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", houseImageLocations1, 2, 2, 1000,false,false));
 //        houses.add(new House(1295, "1802 W University", "Portales, NM 88130",R.drawable.house_example_2, 3, 2, 0));
 //        houses.add(new House(1295, "1514 s Ave A", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1685));
 //        houses.add(new House(1295, "2108 s Ave G", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 0));
