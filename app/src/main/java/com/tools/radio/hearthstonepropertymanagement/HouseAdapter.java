@@ -87,7 +87,7 @@ public class HouseAdapter extends ArrayAdapter<House> {
 //
 //        }
 
-        ImageAdapter adapter = new ImageAdapter((Activity) this.getContext(), currentHouse.getmHouseImageLocations(), R.color.grey);
+        ImageAdapter adapter = new ImageAdapter((Activity) this.getContext(), currentHouse.getmHouseImageLocations());
 
         ListView listView = (ListView) listItemView.findViewById(R.id.Image_List_in_house_list_view);
 //        listView.setRotation(-90);

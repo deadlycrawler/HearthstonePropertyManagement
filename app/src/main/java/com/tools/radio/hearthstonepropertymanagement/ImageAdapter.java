@@ -12,12 +12,11 @@ import java.util.ArrayList;
 
 public class ImageAdapter extends ArrayAdapter<Images> {
 
-    private int mColorResourceId;
 
-    public ImageAdapter(Activity context, ArrayList<Images> houseImageLocations, int colorResourceId) {
+
+    public ImageAdapter(Activity context, ArrayList<Images> houseImageLocations) {
         super(context, 0, houseImageLocations);
 
-        this.mColorResourceId = colorResourceId;
     }
 
     @Override

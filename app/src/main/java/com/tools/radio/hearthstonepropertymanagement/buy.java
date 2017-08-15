@@ -22,7 +22,6 @@ public class buy extends AppCompatActivity {
 
         //place holder houses
         ArrayList<Images> houseImageLocations1 = new ArrayList<>();
-
         houseImageLocations1.add(new Images(R.drawable.house_example_1));
         houseImageLocations1.add(new Images(R.drawable.house_example_3));
         houseImageLocations1.add(new Images(R.drawable.house_example_2));
