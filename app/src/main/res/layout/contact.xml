@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/burnt"
+        style="@style/CategoryStyle"
         android:orientation="horizontal">
 
         <ImageView
@@ -62,8 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/aboutUs"
-        android:textAlignment="center"
-        android:textColor="@color/brick" />
+        android:textAlignment="center" />
 
     <ImageView
         android:id="@+id/seal"

@@ -30,7 +30,6 @@
             <TextView
                 android:id="@+id/buy"
                 style="@style/CategoryStyle"
-                android:background="?android:attr/selectableItemBackground"
                 android:text="@string/buy" />
         </FrameLayout>
 
@@ -44,7 +43,6 @@
             <TextView
                 android:id="@+id/sell"
                 style="@style/CategoryStyle"
-                android:background="?android:attr/selectableItemBackground"
                 android:text="@string/sell" />
         </FrameLayout>
 
@@ -57,7 +55,6 @@
             <TextView
                 android:id="@+id/rent"
                 style="@style/CategoryStyle"
-                android:background="?android:attr/selectableItemBackground"
                 android:text="@string/rent" />
         </FrameLayout>
 
@@ -70,7 +67,6 @@
             <TextView
                 android:id="@+id/news"
                 style="@style/CategoryStyle"
-                android:background="?android:attr/selectableItemBackground"
                 android:text="@string/news" />
 
         </FrameLayout>
@@ -84,7 +80,6 @@
             <TextView
                 android:id="@+id/contact"
                 style="@style/CategoryStyle"
-                android:background="?android:attr/selectableItemBackground"
                 android:text="@string/contactString" />
         </FrameLayout>
 
