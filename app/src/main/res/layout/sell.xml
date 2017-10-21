@@ -25,7 +25,7 @@
         android:textColor="@color/burnt" />
 
     <TextView
-        android:id="@+id/contact"
+        android:id="@+id/contactUs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

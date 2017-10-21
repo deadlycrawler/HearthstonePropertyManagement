@@ -19,49 +19,49 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activitys.MainActivity"
             android:screenOrientation="portrait"></activity>
 
         <activity
-            android:name=".contact"
+            android:name=".Activitys.contact"
             android:label="@string/contactString"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".buy"
+            android:name=".Activitys.buy"
             android:label="@string/purchaseString"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".sell"
+            android:name=".Activitys.sell"
             android:label="@string/sell"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".rent"
             android:label="@string/rent"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".rent_search"
             android:label="@string/rent"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".news"
+            android:name=".Activitys.news"
             android:label="@string/news"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".seal"
             android:label="@string/waxLabel"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
     </application>
 

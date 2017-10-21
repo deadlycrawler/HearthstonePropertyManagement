@@ -1,8 +1,12 @@
-package com.tools.radio.hearthstonepropertymanagement;
+package com.tools.radio.hearthstonepropertymanagement.Activitys;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+
+import com.tools.radio.hearthstonepropertymanagement.NewsAdapter;
+import com.tools.radio.hearthstonepropertymanagement.NewsLister;
+import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;
 
