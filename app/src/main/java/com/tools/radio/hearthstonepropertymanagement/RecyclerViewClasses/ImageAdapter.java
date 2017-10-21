@@ -1,4 +1,4 @@
-package com.tools.radio.hearthstonepropertymanagement;
+package com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+
+import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;
 

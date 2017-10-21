@@ -1,12 +1,12 @@
-package com.tools.radio.hearthstonepropertymanagement.Activitys;
+package com.tools.radio.hearthstonepropertymanagement.Activitys.buy;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import com.tools.radio.hearthstonepropertymanagement.House;
-import com.tools.radio.hearthstonepropertymanagement.HouseAdapter;
-import com.tools.radio.hearthstonepropertymanagement.Images;
+import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.House;
+import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.HouseAdapter;
+import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.Images;
 import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;

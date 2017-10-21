@@ -1,4 +1,4 @@
-package com.tools.radio.hearthstonepropertymanagement;
+package com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses;
 
 
 import java.util.ArrayList;

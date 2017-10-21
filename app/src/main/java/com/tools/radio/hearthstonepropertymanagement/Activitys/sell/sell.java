@@ -1,4 +1,4 @@
-package com.tools.radio.hearthstonepropertymanagement.Activitys;
+package com.tools.radio.hearthstonepropertymanagement.Activitys.sell;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +21,7 @@ public class sell extends AppCompatActivity {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(sell.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.class);
+                Intent i = new Intent(sell.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
                 startActivity(i);
             }
         });

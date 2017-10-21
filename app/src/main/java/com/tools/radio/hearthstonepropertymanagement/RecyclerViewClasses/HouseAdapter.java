@@ -1,4 +1,4 @@
-package com.tools.radio.hearthstonepropertymanagement;
+package com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,16 +6,13 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.tools.radio.hearthstonepropertymanagement.R;
 
-import static com.tools.radio.hearthstonepropertymanagement.R.string.beds;
+import java.util.ArrayList;
 
 
 public class HouseAdapter extends ArrayAdapter<House> {

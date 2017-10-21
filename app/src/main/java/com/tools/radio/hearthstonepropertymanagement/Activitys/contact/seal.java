@@ -1,8 +1,10 @@
-package com.tools.radio.hearthstonepropertymanagement;
+package com.tools.radio.hearthstonepropertymanagement.Activitys.contact;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.tools.radio.hearthstonepropertymanagement.R;
 
 import org.w3c.dom.Text;
 

@@ -1,4 +1,4 @@
-package com.tools.radio.hearthstonepropertymanagement;
+package com.tools.radio.hearthstonepropertymanagement.Activitys.Rent;
 
 
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;
 

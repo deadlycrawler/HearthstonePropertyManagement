@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.tools.radio.hearthstonepropertymanagement.Activitys.Rent.rent_search;
 import com.tools.radio.hearthstonepropertymanagement.R;
-import com.tools.radio.hearthstonepropertymanagement.rent_search;
 
 
 //TODO: change splash screen to his seal and have a highlight on his brand
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.class);
+                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
                 startActivity(i);
             }
         });
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.news.class);
+                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.news.news.class);
                 startActivity(i);
             }
         });
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.buy.class);
+                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.buy.buy.class);
                 startActivity(i);
             }
         });
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         sell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.sell.class);
+                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.sell.sell.class);
                 startActivity(i);
             }
         });

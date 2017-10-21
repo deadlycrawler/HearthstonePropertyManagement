@@ -1,21 +1,15 @@
-package com.tools.radio.hearthstonepropertymanagement;
+package com.tools.radio.hearthstonepropertymanagement.Activitys.Rent;
 
-import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.House;
+import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.HouseAdapter;
+import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.Images;
+import com.tools.radio.hearthstonepropertymanagement.R;
 
-import static java.security.AccessController.getContext;
+import java.util.ArrayList;
 
 
 public class rent extends AppCompatActivity {

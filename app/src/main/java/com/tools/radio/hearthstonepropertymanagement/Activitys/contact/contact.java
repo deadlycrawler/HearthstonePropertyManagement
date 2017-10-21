@@ -1,4 +1,4 @@
-package com.tools.radio.hearthstonepropertymanagement.Activitys;
+package com.tools.radio.hearthstonepropertymanagement.Activitys.contact;
 
 
 import android.content.Intent;
@@ -72,7 +72,7 @@ public class contact extends AppCompatActivity {
         seal.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent i = new Intent(contact.this, com.tools.radio.hearthstonepropertymanagement.seal.class);
+                Intent i = new Intent(contact.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.seal.class);
                 startActivity(i);
 
             }
