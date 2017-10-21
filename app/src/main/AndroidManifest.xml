@@ -28,7 +28,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activitys.buy.buy"
-            android:label="@string/purchaseString"
+            android:label="@string/buy"
             android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
         <activity

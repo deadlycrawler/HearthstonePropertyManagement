@@ -1,9 +1,14 @@
 package com.tools.radio.hearthstonepropertymanagement.Activitys.buy;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.tools.radio.hearthstonepropertymanagement.Activitys.sell.sell;
 import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.House;
 import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.HouseAdapter;
 import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.Images;
@@ -11,12 +16,14 @@ import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;
 
+import static com.tools.radio.hearthstonepropertymanagement.R.layout.buy_list;
+
 public class buy extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.buy_list);
+        setContentView(buy_list);
 
         final ArrayList<House> houses = new ArrayList<House>();
         //TODO: add a search page for buying houses
@@ -52,5 +59,29 @@ public class buy extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int menuItemThatWasSelected = item.getItemId();
+        Context context = buy.this;
+
+        switch (menuItemThatWasSelected){
+
+            case R.id.CallMenuButton:
+                Intent i = new Intent(buy.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
+                startActivity(i);
+                break;
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.tools.radio.hearthstonepropertymanagement.Activitys.AboutUs.AboutUsActivity;
 import com.tools.radio.hearthstonepropertymanagement.Activitys.Rent.rent_search;
 import com.tools.radio.hearthstonepropertymanagement.R;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         TextView buy = (TextView) findViewById(R.id.buy);
         TextView sell = (TextView) findViewById(R.id.sell);
         TextView rent = (TextView) findViewById(R.id.rent);
+        TextView aboutUs = (TextView) findViewById(R.id.aboutUs);
 
         //buttons(textViews) on primary menu, simple click events to navigate
         contact.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, rent_search.class);
+                startActivity(i);
+            }
+        });
+        aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, AboutUsActivity.class);
                 startActivity(i);
             }
         });
