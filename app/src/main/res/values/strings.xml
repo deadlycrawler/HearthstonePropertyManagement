@@ -2,9 +2,9 @@
 
     <string name="app_name">Hearthstone Property Management</string>
 
-    <string name="sell">sell a property</string>
+    <string name="sell">sell</string>
 
-    <string name="rent">rent a property</string>
+    <string name="rent">rent</string>
 
     <string name="news">news</string>
 
@@ -88,6 +88,9 @@
     <string name="sealingWaxP6">Benjamin Franklin, John Adams and Thomas Jefferson created the first seal of the United States on July 4th, 1776, immediately after the Declaration of Independence was signed. Congress realized the necessity of such a seal for the newly established nation.</string>
     <string name="yes">yes</string>
     <string name="no">no</string>
+    <string name="need_help_selling_your_home">Need help Selling your home?</string>
+    <string name="a_lot_of_sellers">A lot of sellers simply go back to the broker who sold them the house—and that is great if your broker gave you a smooth buying experience. If you would like a professional, knowledgeable and attentive broker this is the place to start. Please give us a call or email so we can set up an appointment and talk about a strategy that is best for you.</string>
+    <string name="buy">Buy</string>
 
 
 </resources>

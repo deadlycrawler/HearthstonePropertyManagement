@@ -3,16 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#000000">
+    android:background="@color/tan_background"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/need_help_selling_your_home"
+        android:textSize="35dp"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:textColor="@color/burnt" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="this is the sell page"
-        android:textColor="#990000"/>
-
-
+        android:text="@string/a_lot_of_sellers"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:textColor="@color/burnt" />
 
 
 </LinearLayout>
