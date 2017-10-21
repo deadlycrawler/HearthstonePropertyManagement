@@ -1,14 +1,18 @@
 package com.tools.radio.hearthstonepropertymanagement.Activitys.Rent;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.tools.radio.hearthstonepropertymanagement.Activitys.sell.sell;
 import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;
@@ -82,5 +86,28 @@ public class rent_search extends AppCompatActivity {
 
 
 
+    }@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int menuItemThatWasSelected = item.getItemId();
+        Context context = rent_search.this;
+
+        switch (menuItemThatWasSelected){
+
+            case R.id.CallMenuButton:
+                Intent i = new Intent(rent_search.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
+                startActivity(i);
+                break;
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

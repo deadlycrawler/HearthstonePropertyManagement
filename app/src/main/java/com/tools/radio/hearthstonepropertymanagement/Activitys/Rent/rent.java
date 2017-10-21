@@ -1,9 +1,14 @@
 package com.tools.radio.hearthstonepropertymanagement.Activitys.Rent;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.tools.radio.hearthstonepropertymanagement.Activitys.sell.sell;
 import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.House;
 import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.HouseAdapter;
 import com.tools.radio.hearthstonepropertymanagement.RecyclerViewClasses.Images;
@@ -70,6 +75,29 @@ public class rent extends AppCompatActivity {
         listView.setAdapter(adapter);
 
 
+    }@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int menuItemThatWasSelected = item.getItemId();
+        Context context = rent.this;
+
+        switch (menuItemThatWasSelected){
+
+            case R.id.CallMenuButton:
+                Intent i = new Intent(rent.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
+                startActivity(i);
+                break;
+
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 
 }
