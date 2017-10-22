@@ -30,8 +30,6 @@ public class buy extends AppCompatActivity {
         //TODO: think about recyclerView for the images
 
 
-
-
         //place holder houses
         ArrayList<Images> houseImageLocations1 = new ArrayList<>();
         houseImageLocations1.add(new Images(R.drawable.house_example_1));
@@ -47,11 +45,11 @@ public class buy extends AppCompatActivity {
         //place holder data
 
 //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet,garage,fireplace)
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453,true,false));
-        houses.add(new House(247578, "666 bacon DR", "Port vill WY 29297", houseImageLocations2, 6, 6, 6,false,true));
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453,true,false));
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453,true,false));
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453,true,false));
+        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
+        houses.add(new House(247578, "666 bacon DR", "Port vill WY 29297", houseImageLocations2, 6, 6, 6, false, true));
+        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
+        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
+        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
 
         //takes word objects and desplays them in a list view and casts them to textviews
         HouseAdapter adapter = new HouseAdapter(this, houses, R.color.grey);
@@ -60,6 +58,7 @@ public class buy extends AppCompatActivity {
         listView.setAdapter(adapter);
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -72,7 +71,7 @@ public class buy extends AppCompatActivity {
         int menuItemThatWasSelected = item.getItemId();
         Context context = buy.this;
 
-        switch (menuItemThatWasSelected){
+        switch (menuItemThatWasSelected) {
 
             case R.id.CallMenuButton:
                 Intent i = new Intent(buy.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);

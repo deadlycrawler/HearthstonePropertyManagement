@@ -28,7 +28,7 @@ public class AboutUsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int menuItemThatWasSelected = item.getItemId();
-        Context context = AboutUsActivity.this;
+      Context context = AboutUsActivity.this;
 
         switch (menuItemThatWasSelected) {
 

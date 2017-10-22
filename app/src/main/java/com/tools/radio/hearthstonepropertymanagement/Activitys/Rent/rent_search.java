@@ -28,6 +28,7 @@ public class rent_search extends AppCompatActivity {
         //TODO: create getter and setter for word list to throw data to the rent results page(WIP)
         //TODO: have rent.java become the adapter once the data is pushed to it and display the available houses
         //TODO: remove(comment out) View all buttom once the search function works correctly
+        //TODO: emulate the search page on website
 
 
         //first spinner for house type
