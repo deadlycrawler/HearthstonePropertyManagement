@@ -23,7 +23,7 @@ public class rent_search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rent_search);
 
-            //TODO: finish the search page
+        //TODO: finish the search page
 
         //TODO: create getter and setter for word list to throw data to the rent results page(WIP)
         //TODO: have rent.java become the adapter once the data is pushed to it and display the available houses
@@ -32,8 +32,8 @@ public class rent_search extends AppCompatActivity {
 
 
         //first spinner for house type
-        Spinner homeStyleDropdown = (Spinner)findViewById(R.id.houseType);
-        Spinner locationDropdown= (Spinner)findViewById(R.id.cityLocation);
+        Spinner homeStyleDropdown = (Spinner) findViewById(R.id.houseType);
+//        Spinner locationDropdown = (Spinner) findViewById(R.id.cityLocation);
 
 
         //values for home Style(condo/house) spinner
@@ -48,16 +48,31 @@ public class rent_search extends AppCompatActivity {
 
         //values for citylocationDropdown
 
-        final ArrayList<String> cityLocationDropdownLIst = new ArrayList<>();
-        cityLocationDropdownLIst.add(getString(R.string.any));
-        cityLocationDropdownLIst.add(getString(R.string.clovis));
-        cityLocationDropdownLIst.add(getString(R.string.portales));
-
-        ArrayAdapter<String> locationDropdown_adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, cityLocationDropdownLIst);
-        locationDropdown.setAdapter(locationDropdown_adapter);
-
-
-
+//        final ArrayList<String> cityLocationDropdownLIst = new ArrayList<>();
+//        cityLocationDropdownLIst.add(getString(R.string.any));
+//
+//        cityLocationDropdownLIst.add(getString(R.string.animas));
+//        cityLocationDropdownLIst.add(getString(R.string.Arrey));
+//        cityLocationDropdownLIst.add(getString(R.string.Artesia));
+//        cityLocationDropdownLIst.add(getString(R.string.Bernal));
+//        cityLocationDropdownLIst.add(getString(R.string.Broadview));
+//        cityLocationDropdownLIst.add(getString(R.string.Caballo));
+//        cityLocationDropdownLIst.add(getString(R.string.Carlsbad));
+//        cityLocationDropdownLIst.add(getString(R.string.Clayton));
+//        cityLocationDropdownLIst.add(getString(R.string.Cleveland));
+//        cityLocationDropdownLIst.add(getString(R.string.clovis));
+//        cityLocationDropdownLIst.add(getString(R.string.Columbus));
+//        cityLocationDropdownLIst.add(getString(R.string.Conchas_Dam));
+//        cityLocationDropdownLIst.add(getString(R.string.Cuchillo));
+//        cityLocationDropdownLIst.add(getString(R.string.Cutter));
+//        cityLocationDropdownLIst.add(getString(R.string.Deming));
+//        cityLocationDropdownLIst.add(getString(R.string.Dexter));
+//        cityLocationDropdownLIst.add(getString(R.string.Elephant_Butte));
+//        cityLocationDropdownLIst.add(getString(R.string.Engle));
+//        cityLocationDropdownLIst.add(getString(R.string.portales));
+//
+//        ArrayAdapter<String> locationDropdown_adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, cityLocationDropdownLIst);
+//        locationDropdown.setAdapter(locationDropdown_adapter);
 
 
         // tap to view all properties
@@ -76,9 +91,9 @@ public class rent_search extends AppCompatActivity {
 
         TextView search = (TextView) findViewById(R.id.rentSearch);
 
-        search.setOnClickListener(new View.OnClickListener(){
+        search.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
 
 
             }
@@ -86,8 +101,9 @@ public class rent_search extends AppCompatActivity {
         });
 
 
+    }
 
-    }@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
@@ -99,7 +115,7 @@ public class rent_search extends AppCompatActivity {
         int menuItemThatWasSelected = item.getItemId();
         Context context = rent_search.this;
 
-        switch (menuItemThatWasSelected){
+        switch (menuItemThatWasSelected) {
 
             case R.id.CallMenuButton:
                 Intent i = new Intent(rent_search.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
