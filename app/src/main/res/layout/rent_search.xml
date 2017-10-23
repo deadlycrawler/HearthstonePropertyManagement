@@ -170,21 +170,25 @@
             android:layout_height="wrap_content">
 
             <CheckBox
+                android:id="@+id/GarageCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/garage" />
 
             <CheckBox
+                android:id="@+id/FireplaceCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fireplace" />
 
             <CheckBox
+                android:id="@+id/newCheckbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New" />
 
             <CheckBox
+                android:id="@+id/openHomesCheckbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Open Homes" />

@@ -56,7 +56,7 @@ public class rent extends AppCompatActivity {
 //        ImageHeight =  templateImage.getHeight();
 //        ImageWidth=  templateImage.getWidth();
 
-        //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet,garage,fireplace)
+        //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet,Fireplace,fireplace)
         houses.add(new House(1195, "204 W 1st St tower loft", "Portales, NM 88130", houseImageLocations1, 2, 2, 1000,false,false));
 //        houses.add(new House(1295, "1802 W University", "Portales, NM 88130",R.drawable.house_example_2, 3, 2, 0));
 //        houses.add(new House(1295, "1514 s Ave A", "Portales, NM 88130", R.drawable.house_example_2, 3, 2, 1685));

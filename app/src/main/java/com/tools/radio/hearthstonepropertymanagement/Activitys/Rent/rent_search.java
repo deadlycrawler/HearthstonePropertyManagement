@@ -10,13 +10,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tools.radio.hearthstonepropertymanagement.Activitys.sell.sell;
 import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;
@@ -25,6 +24,10 @@ public class rent_search extends AppCompatActivity {
 
     Spinner homeStyleDropdown;
     EditText cityOrZip;
+    EditText minPrice;
+    EditText MaxPrice;
+    CheckBox garage;
+    CheckBox Fireplace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,9 @@ public class rent_search extends AppCompatActivity {
 
         //first spinner for house type
         homeStyleDropdown = (Spinner) findViewById(R.id.houseType);
-        cityOrZip = (EditText)findViewById(R.id.cityOrZip);
+        cityOrZip = (EditText) findViewById(R.id.cityOrZip);
+        garage = (CheckBox) findViewById(R.id.GarageCheckBox);
+        Fireplace = (CheckBox) findViewById(R.id.FireplaceCheckBox);
 
 
         //values for home Style(condo/house) spinner
@@ -52,8 +57,6 @@ public class rent_search extends AppCompatActivity {
 
         ArrayAdapter<String> homeStyleDropDown_Adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, homeStyledropdownLIst);
         homeStyleDropdown.setAdapter(homeStyleDropDown_Adapter);
-
-
 
 
         // tap to view all properties
@@ -116,21 +119,26 @@ public class rent_search extends AppCompatActivity {
     }
 
     public String UriBuilder() {
-        StringBuilder sb = new StringBuilder();
 
-        String cityOrZip,houseType;
+        String cityOrZip = "88130";
+        String houseType;
+        String FireplaceEnabled = "";
+        String GarageEnabled="";
 
-        houseType= this.homeStyleDropdown.getSelectedItem().toString();
+        houseType = this.homeStyleDropdown.getSelectedItem().toString();
         try {
             cityOrZip = this.cityOrZip.getText().toString();
         } catch (Exception e) {
         }
 
-        //toast is for testing the text extractions
-        Toast.makeText(this,houseType,Toast.LENGTH_LONG).show();
+        if (Fireplace.isChecked()) {
+            FireplaceEnabled="fireplaceYn=true&";
+        }if (garage.isChecked()) {
+            FireplaceEnabled="fireplaceYn=true&";
+        }
 
-
-        String url = "http://hearthstonepropertymgt.com/homes-for-sale-results/?boardId=261&zip%5B%5D=88130&location=&propertyType=SFR%2CCND&minListPrice=&maxListPrice=&bedrooms=0&bathCount=0&_openHomesOnlyYn=on&_dateRange=on&_fireplaceYn=on&_garYn=on&yearBuilt=&styleLike%5B%5D=&_areaAndSearch=on";
+//TODO: ADD GARAGE STRING TO ulr
+        String url = "http://hearthstonepropertymgt.com/homes-for-sale-results/?boardId=261&zip%5B%5D=" + cityOrZip + "&location=&propertyType=SFR%2CCND&minListPrice=&maxListPrice=&bedrooms=0&bathCount=0&_openHomesOnlyYn=on&_dateRange=on&"+FireplaceEnabled+"_fireplaceYn=on&_garYn=on&yearBuilt=&styleLike%5B%5D=&_areaAndSearch=on";
         return url;
 
     }
