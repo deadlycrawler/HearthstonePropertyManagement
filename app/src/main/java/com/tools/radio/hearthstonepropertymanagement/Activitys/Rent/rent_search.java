@@ -134,11 +134,11 @@ public class rent_search extends AppCompatActivity {
         if (Fireplace.isChecked()) {
             FireplaceEnabled="fireplaceYn=true&";
         }if (garage.isChecked()) {
-            FireplaceEnabled="fireplaceYn=true&";
+            GarageEnabled="garYn=true&";
         }
 
 //TODO: ADD GARAGE STRING TO ulr
-        String url = "http://hearthstonepropertymgt.com/homes-for-sale-results/?boardId=261&zip%5B%5D=" + cityOrZip + "&location=&propertyType=SFR%2CCND&minListPrice=&maxListPrice=&bedrooms=0&bathCount=0&_openHomesOnlyYn=on&_dateRange=on&"+FireplaceEnabled+"_fireplaceYn=on&_garYn=on&yearBuilt=&styleLike%5B%5D=&_areaAndSearch=on";
+        String url = "http://hearthstonepropertymgt.com/homes-for-sale-results/?boardId=261&zip%5B%5D=" + cityOrZip + "&location=&propertyType=SFR%2CCND&minListPrice=&maxListPrice=&bedrooms=0&bathCount=0&_openHomesOnlyYn=on&_dateRange=on&"+FireplaceEnabled+"_fireplaceYn=on&"+GarageEnabled+"_garYn=on&yearBuilt=&styleLike%5B%5D=&_areaAndSearch=on";
         return url;
 
     }
