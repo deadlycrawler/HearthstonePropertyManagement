@@ -11,8 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tools.radio.hearthstonepropertymanagement.Activitys.sell.sell;
 import com.tools.radio.hearthstonepropertymanagement.R;
@@ -20,6 +22,10 @@ import com.tools.radio.hearthstonepropertymanagement.R;
 import java.util.ArrayList;
 
 public class rent_search extends AppCompatActivity {
+
+    Spinner homeStyleDropdown;
+    EditText cityOrZip;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +40,8 @@ public class rent_search extends AppCompatActivity {
 
 
         //first spinner for house type
-        Spinner homeStyleDropdown = (Spinner) findViewById(R.id.houseType);
-//        Spinner locationDropdown = (Spinner) findViewById(R.id.cityLocation);
+        homeStyleDropdown = (Spinner) findViewById(R.id.houseType);
+        cityOrZip = (EditText)findViewById(R.id.cityOrZip);
 
 
         //values for home Style(condo/house) spinner
@@ -48,33 +54,6 @@ public class rent_search extends AppCompatActivity {
         homeStyleDropdown.setAdapter(homeStyleDropDown_Adapter);
 
 
-        //values for citylocationDropdown
-
-//        final ArrayList<String> cityLocationDropdownLIst = new ArrayList<>();
-//        cityLocationDropdownLIst.add(getString(R.string.any));
-//
-//        cityLocationDropdownLIst.add(getString(R.string.animas));
-//        cityLocationDropdownLIst.add(getString(R.string.Arrey));
-//        cityLocationDropdownLIst.add(getString(R.string.Artesia));
-//        cityLocationDropdownLIst.add(getString(R.string.Bernal));
-//        cityLocationDropdownLIst.add(getString(R.string.Broadview));
-//        cityLocationDropdownLIst.add(getString(R.string.Caballo));
-//        cityLocationDropdownLIst.add(getString(R.string.Carlsbad));
-//        cityLocationDropdownLIst.add(getString(R.string.Clayton));
-//        cityLocationDropdownLIst.add(getString(R.string.Cleveland));
-//        cityLocationDropdownLIst.add(getString(R.string.clovis));
-//        cityLocationDropdownLIst.add(getString(R.string.Columbus));
-//        cityLocationDropdownLIst.add(getString(R.string.Conchas_Dam));
-//        cityLocationDropdownLIst.add(getString(R.string.Cuchillo));
-//        cityLocationDropdownLIst.add(getString(R.string.Cutter));
-//        cityLocationDropdownLIst.add(getString(R.string.Deming));
-//        cityLocationDropdownLIst.add(getString(R.string.Dexter));
-//        cityLocationDropdownLIst.add(getString(R.string.Elephant_Butte));
-//        cityLocationDropdownLIst.add(getString(R.string.Engle));
-//        cityLocationDropdownLIst.add(getString(R.string.portales));
-//
-//        ArrayAdapter<String> locationDropdown_adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, cityLocationDropdownLIst);
-//        locationDropdown.setAdapter(locationDropdown_adapter);
 
 
         // tap to view all properties
@@ -97,7 +76,7 @@ public class rent_search extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                UrlIntent("google.com");
+                UrlIntent(UriBuilder());
 
             }
 
@@ -124,9 +103,7 @@ public class rent_search extends AppCompatActivity {
                 Intent i = new Intent(rent_search.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
                 startActivity(i);
                 break;
-
         }
-
 
         return super.onOptionsItemSelected(item);
     }
@@ -137,4 +114,25 @@ public class rent_search extends AppCompatActivity {
         startActivity(i);
 
     }
+
+    public String UriBuilder() {
+        StringBuilder sb = new StringBuilder();
+
+        String cityOrZip,houseType;
+
+        houseType= this.homeStyleDropdown.getSelectedItem().toString();
+        try {
+            cityOrZip = this.cityOrZip.getText().toString();
+        } catch (Exception e) {
+        }
+
+        //toast is for testing the text extractions
+        Toast.makeText(this,houseType,Toast.LENGTH_LONG).show();
+
+
+        String url = "http://hearthstonepropertymgt.com/homes-for-sale-results/?boardId=261&zip%5B%5D=88130&location=&propertyType=SFR%2CCND&minListPrice=&maxListPrice=&bedrooms=0&bathCount=0&_openHomesOnlyYn=on&_dateRange=on&_fireplaceYn=on&_garYn=on&yearBuilt=&styleLike%5B%5D=&_areaAndSearch=on";
+        return url;
+
+    }
+
 }
