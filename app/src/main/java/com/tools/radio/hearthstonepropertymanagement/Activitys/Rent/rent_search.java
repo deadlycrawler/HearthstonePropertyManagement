@@ -3,12 +3,14 @@ package com.tools.radio.hearthstonepropertymanagement.Activitys.Rent;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -95,6 +97,7 @@ public class rent_search extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                UrlIntent("google.com");
 
             }
 
@@ -126,5 +129,12 @@ public class rent_search extends AppCompatActivity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void UrlIntent(String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+
     }
 }
