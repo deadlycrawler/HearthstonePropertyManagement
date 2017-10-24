@@ -34,7 +34,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="25dp"
-                android:spinnerMode="dropdown"></Spinner>
+                android:spinnerMode="dropdown">
+            </Spinner>
         </LinearLayout>
 
         <LinearLayout

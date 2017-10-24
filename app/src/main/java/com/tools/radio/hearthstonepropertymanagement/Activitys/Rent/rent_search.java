@@ -134,6 +134,7 @@ public class rent_search extends AppCompatActivity {
         houseType = this.homeStyleDropdown.getSelectedItem().toString();
         try {
             cityOrZip = this.cityOrZip.getText().toString();
+            cityOrZip=cityOrZip.toUpperCase();
             if (ZipChecker(cityOrZip)) {
                 zipInsert = "zip%5B%5D=" + cityOrZip;
             } else {
