@@ -40,6 +40,7 @@ public class rent_search extends AppCompatActivity {
         //TODO: have rent.java become the adapter once the data is pushed to it and display the available houses
         //TODO: remove(comment out) View all buttom once the search function works correctly
         //TODO: emulate the search page on website
+        //TODO: test mixed case on city input
 
 
         //first spinner for house type
