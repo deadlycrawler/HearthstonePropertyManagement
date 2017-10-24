@@ -78,8 +78,12 @@ public class rent_search extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String url = UriBuilder();
+                if (url == "") {
 
-                UrlIntent(UriBuilder());
+                } else {
+                    UrlIntent(url);
+                }
 
             }
 
@@ -119,20 +123,25 @@ public class rent_search extends AppCompatActivity {
 
     public String UriBuilder() {
 
-        String cityOrZip = "bacon";
+        String cityOrZip = "";
         String houseType;
         String FireplaceEnabled = "";
         String GarageEnabled = "";
         String zipInsert = "";
         String cityInsert = "";
+        String url = "";
 
         houseType = this.homeStyleDropdown.getSelectedItem().toString();
         try {
             cityOrZip = this.cityOrZip.getText().toString();
-            if(ZipChecker(cityOrZip)){
-                zipInsert = "zip%5B%5D="+cityOrZip;
-            }else{
-                cityInsert = "cityId[]=13889"+cityOrZip;
+            if (ZipChecker(cityOrZip)) {
+                zipInsert = "zip%5B%5D=" + cityOrZip;
+            } else {
+                if (cityID(cityOrZip) == "city is bad to the bone") {
+                    return url;
+                } else {
+                    cityInsert = "cityId[]=" + cityID(cityOrZip);
+                }
             }
         } catch (Exception e) {
 
@@ -146,8 +155,7 @@ public class rent_search extends AppCompatActivity {
             GarageEnabled = "garYn=true&";
         }
 
-
-        String url = "http://hearthstonepropertymgt.com/homes-for-sale-results/?boardId=261&"+ zipInsert +cityInsert+ "&location=&propertyType=SFR%2CCND&minListPrice=&maxListPrice=&bedrooms=0&bathCount=0&_openHomesOnlyYn=on&_dateRange=on&" + FireplaceEnabled + "_fireplaceYn=on&" + GarageEnabled + "_garYn=on&yearBuilt=&styleLike%5B%5D=&_areaAndSearch=on";
+        url = "http://hearthstonepropertymgt.com/homes-for-sale-results/?boardId=261&" + zipInsert + cityInsert + "&location=&propertyType=SFR%2CCND&minListPrice=&maxListPrice=&bedrooms=0&bathCount=0&_openHomesOnlyYn=on&_dateRange=on&" + FireplaceEnabled + "_fireplaceYn=on&" + GarageEnabled + "_garYn=on&yearBuilt=&styleLike%5B%5D=&_areaAndSearch=on";
         return url;
 
     }
@@ -164,6 +172,22 @@ public class rent_search extends AppCompatActivity {
                 return false;
             }
         }
+    }
+
+    public String cityID(String cityName) {
+
+        String cityID = "";
+
+        switch (cityName) {
+            case "clovis":
+                cityID = "13889";
+                break;
+            default:
+                cityID = "city is bad to the bone";
+
+        }
+
+        return cityID;
     }
 
 }
