@@ -57,7 +57,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_weight="1"
-                android:hint="Enter city or zip" />
+                android:hint="Enter city or zip"
+                android:inputType="textCapCharacters"
+                android:maxLines="1" />
         </LinearLayout>
 
     </LinearLayout>

@@ -179,8 +179,11 @@ public class rent_search extends AppCompatActivity {
         String cityID = "";
 
         switch (cityName) {
-            case "clovis":
+            case "CLOVIS":
                 cityID = "13889";
+                break;
+            case "PORTALES":
+                cityID="36481";
                 break;
             default:
                 cityID = "city is bad to the bone";
