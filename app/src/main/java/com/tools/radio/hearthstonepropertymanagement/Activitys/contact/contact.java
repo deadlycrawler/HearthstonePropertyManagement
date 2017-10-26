@@ -95,7 +95,7 @@ public class contact extends AppCompatActivity {
 
     //Methods for contacting homespot
     private String[] Address() {
-        String[] emailAddresses = {"Deadlycrawler2@gmail.com"};
+        String[] emailAddresses = {"butch_I_dont_have_your_profesional@gmail.com"};
         return emailAddresses;
     }
 
