@@ -27,8 +27,8 @@
             android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activitys.buy.buy"
-            android:label="@string/buy"
+            android:name=".Activitys.rental.Rentals"
+            android:label="@string/rent"
             android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -37,13 +37,13 @@
             android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activitys.Rent.rent"
+            android:name=".Activitys.buy.buy"
             android:label="@string/rent"
             android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activitys.Rent.rent_search"
-            android:label="@string/rent"
+            android:name=".Activitys.buy.buy_search"
+            android:label="@string/buy"
             android:parentActivityName=".Activitys.MainActivity"
             android:screenOrientation="portrait" />
         <activity

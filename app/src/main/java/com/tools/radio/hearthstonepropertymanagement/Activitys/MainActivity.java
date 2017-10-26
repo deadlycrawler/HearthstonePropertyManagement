@@ -1,13 +1,15 @@
 package com.tools.radio.hearthstonepropertymanagement.Activitys;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.tools.radio.hearthstonepropertymanagement.Activitys.AboutUs.AboutUsActivity;
-import com.tools.radio.hearthstonepropertymanagement.Activitys.Rent.rent_search;
+import com.tools.radio.hearthstonepropertymanagement.Activitys.buy.buy_search;
+import com.tools.radio.hearthstonepropertymanagement.Activitys.rental.Rentals;
 import com.tools.radio.hearthstonepropertymanagement.R;
 
 
@@ -24,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextView contact = (TextView) findViewById(R.id.contact);
         TextView news = (TextView) findViewById(R.id.news);
-        TextView buy = (TextView) findViewById(R.id.buy);
+        TextView rental = (TextView) findViewById(R.id.rental);
         TextView sell = (TextView) findViewById(R.id.sell);
-        TextView rent = (TextView) findViewById(R.id.rent);
+        TextView buy = (TextView) findViewById(R.id.buy);
         TextView aboutUs = (TextView) findViewById(R.id.aboutUs);
 
         //buttons(textViews) on primary menu, simple click events to navigate
@@ -38,18 +40,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        news.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.news.news.class);
+//                startActivity(i);
+//            }
+//        });
+
+
         news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.news.news.class);
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("http://hearthstonepropertymgt.com/blog/"));
                 startActivity(i);
+
+
             }
         });
-
-        buy.setOnClickListener(new View.OnClickListener() {
+        rental.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, com.tools.radio.hearthstonepropertymanagement.Activitys.buy.buy.class);
+                Intent i = new Intent(MainActivity.this, Rentals.class);
                 startActivity(i);
             }
         });
@@ -62,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        rent.setOnClickListener(new View.OnClickListener() {
+        buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, rent_search.class);
+                Intent i = new Intent(MainActivity.this, buy_search.class);
                 startActivity(i);
             }
         });

@@ -49,7 +49,7 @@ public class HouseAdapter extends ArrayAdapter<House> {
             @Override
             public void onClick(View view) {
 
-                //address is basied of the input address fromt he rent/buy page
+                //address is basied of the input address fromt he buy/Rentals page
                 Uri gmmIntentUri = Uri.parse(currentHouse.getGoogleMapsAddress());
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");

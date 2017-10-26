@@ -1,4 +1,4 @@
-package com.tools.radio.hearthstonepropertymanagement.Activitys.Rent;
+package com.tools.radio.hearthstonepropertymanagement.Activitys.buy;
 
 
 import android.content.Context;
@@ -20,7 +20,7 @@ import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;
 
-public class rent_search extends AppCompatActivity {
+public class buy_search extends AppCompatActivity {
 
     Spinner homeStyleDropdown;
     EditText cityOrZip;
@@ -36,11 +36,10 @@ public class rent_search extends AppCompatActivity {
 
         //TODO: finish the search page
 
-        //TODO: create getter and setter for word list to throw data to the rent results page(WIP)
-        //TODO: have rent.java become the adapter once the data is pushed to it and display the available houses
+        //TODO: create getter and setter for word list to throw data to the buy results page(WIP)
+        //TODO: have buy.java become the adapter once the data is pushed to it and display the available houses
         //TODO: remove(comment out) View all buttom once the search function works correctly
         //TODO: emulate the search page on website
-        //TODO: test mixed case on city input
 
 
         //first spinner for house type
@@ -66,7 +65,7 @@ public class rent_search extends AppCompatActivity {
         viewAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(rent_search.this, rent.class);
+                Intent i = new Intent(buy_search.this, buy.class);
                 startActivity(i);
             }
         });
@@ -102,12 +101,12 @@ public class rent_search extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int menuItemThatWasSelected = item.getItemId();
-        Context context = rent_search.this;
+        Context context = buy_search.this;
 
         switch (menuItemThatWasSelected) {
 
             case R.id.CallMenuButton:
-                Intent i = new Intent(rent_search.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
+                Intent i = new Intent(buy_search.this, com.tools.radio.hearthstonepropertymanagement.Activitys.contact.contact.class);
                 startActivity(i);
                 break;
         }
@@ -140,13 +139,16 @@ public class rent_search extends AppCompatActivity {
                 zipInsert = "zip%5B%5D=" + cityOrZip;
             } else {
                 if (cityID(cityOrZip) == "city is bad to the bone") {
+                    MakeToast("check city/zip block");
                     return url;
                 } else {
                     cityInsert = "cityId[]=" + cityID(cityOrZip);
                 }
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
+            Toast.makeText(this,"check city/zip block for errors",Toast.LENGTH_LONG).show();
+            return url;
         }
 
 
@@ -193,6 +195,11 @@ public class rent_search extends AppCompatActivity {
         }
 
         return cityID;
+    }
+
+    public void MakeToast(String message){
+
+        Toast.makeText(this,message,Toast.LENGTH_LONG).show();
     }
 
 }
