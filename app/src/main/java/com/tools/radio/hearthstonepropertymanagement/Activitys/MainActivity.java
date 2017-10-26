@@ -13,8 +13,8 @@ import com.tools.radio.hearthstonepropertymanagement.Activitys.rental.Rentals;
 import com.tools.radio.hearthstonepropertymanagement.R;
 
 
-//TODO: change splash screen to his seal and have a highlight on his brand
-//TODO: impliment tracker of houses people are possibly intrested in, create a varrible to contrain the last listing that was interacted with prior to hiting contact
+//TODO: change splash screen
+//TODO: implement tracker of houses people are possibly intrested in, create a varrible to contrain the last listing that was interacted with prior to hiting contact
 
 public class MainActivity extends AppCompatActivity {
 

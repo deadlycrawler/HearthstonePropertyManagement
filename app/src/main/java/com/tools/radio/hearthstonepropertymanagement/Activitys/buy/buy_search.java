@@ -32,12 +32,12 @@ public class buy_search extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rent_search);
+        setContentView(R.layout.buy_search);
 
         //TODO: finish the search page
 
-        //TODO: create getter and setter for word list to throw data to the buy results page(WIP)
-        //TODO: have buy.java become the adapter once the data is pushed to it and display the available houses
+
+
         //TODO: remove(comment out) View all buttom once the search function works correctly
         //TODO: emulate the search page on website
 
@@ -57,18 +57,6 @@ public class buy_search extends AppCompatActivity {
 
         ArrayAdapter<String> homeStyleDropDown_Adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, homeStyledropdownLIst);
         homeStyleDropdown.setAdapter(homeStyleDropDown_Adapter);
-
-
-        // tap to view all properties
-        TextView viewAll = (TextView) findViewById(R.id.rentViewAll);
-
-        viewAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(buy_search.this, buy.class);
-                startActivity(i);
-            }
-        });
 
 
         //search function

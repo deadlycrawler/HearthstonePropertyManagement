@@ -15,18 +15,17 @@ import com.tools.radio.hearthstonepropertymanagement.R;
 
 import java.util.ArrayList;
 
-import static com.tools.radio.hearthstonepropertymanagement.R.layout.buy_list;
+import static com.tools.radio.hearthstonepropertymanagement.R.layout.rental_list;
 
 public class Rentals extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(buy_list);
+        setContentView(rental_list);
 
         final ArrayList<House> houses = new ArrayList<House>();
-        //TODO: add a search page for buying houses
-        //TODO: think about recyclerView for the images
+        //TODO: add a search page for renting houses
 
 
         //place holder houses
@@ -39,16 +38,28 @@ public class Rentals extends AppCompatActivity {
         ArrayList<Images> houseImageLocations2 = new ArrayList<>();
         houseImageLocations2.add(new Images(R.drawable.house_example_1));
         houseImageLocations2.add(new Images(R.drawable.house_example_2));
+        houseImageLocations2.add(new Images(R.drawable.house));
+        houseImageLocations2.add(new Images(R.drawable.house_example_2));
         houseImageLocations2.add(new Images(R.drawable.house_example_3));
+        houseImageLocations2.add(new Images(R.drawable.house_example_1));
+
+        ArrayList<Images> houseImageLocations3 = new ArrayList<>();
+        houseImageLocations2.add(new Images(R.drawable.house));
+        houseImageLocations2.add(new Images(R.drawable.house_example_1));
+        houseImageLocations2.add(new Images(R.drawable.house_example_2));
+        houseImageLocations2.add(new Images(R.drawable.house));
+        houseImageLocations2.add(new Images(R.drawable.house_example_2));
+        houseImageLocations2.add(new Images(R.drawable.house));
+        houseImageLocations2.add(new Images(R.drawable.house_example_1));
 
         //place holder data
 
 //WORD CONSTRUCTOR(price, address line 1, address line 2, main image resource location,beds,baths,sq feet,garage,fireplace)
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
-        houses.add(new House(247578, "666 bacon DR", "Port vill WY 29297", houseImageLocations2, 6, 6, 6, false, true));
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
-        houses.add(new House(103500, "777 bacon DR", "Port vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
+        houses.add(new House(350, "1604 E Spruce St","Portales, NM", houseImageLocations1, 3, 2, 3453, true, false));
+        houses.add(new House(247578, "5632 elbow DR", "santa fe mm 28457", houseImageLocations2, 6, 6, 6, false, true));
+        houses.add(new House(1500, "453 bacon DR", "town vill WY 29297", houseImageLocations1, 3, 2, 3453, true, false));
+        houses.add(new House(1035, "382 crunchy st", "Seattle WA 29297", houseImageLocations2, 3, 2, 3453, true, false));
+        houses.add(new House(1033, "9745 long DR", "portales WY 29297", houseImageLocations2, 3, 2, 3453, true, false));
 
         //takes word objects and desplays them in a list view and casts them to textviews
         HouseAdapter adapter = new HouseAdapter(this, houses, R.color.grey);

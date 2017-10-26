@@ -24,7 +24,7 @@ public class buy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rent_list);
+        setContentView(R.layout.buy_list);
 
 
         //TODO: change snapshot view "beds,baths etc." to a horizontal scrolling view.
